@@ -19,7 +19,7 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-  <ul class="nav nav-tabs">
+  <ul class="nav nav-tabs" >
   <li class="nav-item">
     <a class="nav-link active" href="/">Home</a>
   </li>
