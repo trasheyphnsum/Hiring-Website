@@ -30,7 +30,7 @@
                 <label >Retype Password</label>
                 <input type="password" class="form-control" name="retype_password"  placeholder="Enter password to confirm">
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Sign Up</button>
         </form>
     </div>
 </div>

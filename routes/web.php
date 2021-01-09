@@ -18,23 +18,27 @@ use Illuminate\Support\Facades\Route;
 // });
 
 //Hiring Website
-//Route::get('/', 'Restroscontroller@index');
+Route::get('/', 'Restroscontroller@index');
 Route::get('/contact', 'Restroscontroller@contact');
 
 //Equipments
 Route::view('/add', 'hire/add');
 Route::post('/add', 'Restroscontroller@add');
-Route::get('/', 'Restroscontroller@list');
+Route::get('/add', 'Restroscontroller@list');
 
 //Vehicle or machine
 Route::view('/add1', 'hire/add1');
 Route::post('/add1', 'Restroscontroller@add1');
-Route::get('/v', 'Restroscontroller@list1');
+Route::get('/add1', 'Restroscontroller@list1');
 
 
 //register
 Route::view('/register', 'hire/register');
 Route::post('/register', 'Restroscontroller@register');
+
+//register
+Route::view('/login', 'hire/login');
+Route::post('/login', 'Restroscontroller@login');
 
 //Products
 //Route::resource('products','ProductController');

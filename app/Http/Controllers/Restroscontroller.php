@@ -36,6 +36,7 @@ class Restroscontroller extends Controller
         $equip->Image=$request->input('Image');
         $request->session()->flash('status','Your Post added Successfully');
         $equip->save();
+        return redirect('/add');
     }
 
     //vehivle machinaries
@@ -53,6 +54,7 @@ class Restroscontroller extends Controller
         $equip->Image=$request->input('Image');
         $request->session()->flash('status','Your Post added Successfully');
         $equip->save();
+        return redirect('/add1');
     }
 
     //Register
@@ -74,7 +76,7 @@ class Restroscontroller extends Controller
     public function list()
     {
         $data = Equipment::all();
-        return view('hire/home',["data"=>$data]);
+        return view('hire/add',["data"=>$data]);
     }
 
     //vehicle view
@@ -82,7 +84,7 @@ class Restroscontroller extends Controller
     public function list1()
     {
         $data = Vehicle::all();
-        return view('hire/home',["data"=>$data]);
+        return view('hire/add1',["data"=>$data]);
     }
 
 
