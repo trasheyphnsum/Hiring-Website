@@ -21,6 +21,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'Restroscontroller@index');
 Route::get('/contact', 'Restroscontroller@contact');
 
+
 //Equipments
 Route::view('/add', 'hire/add');
 Route::post('/add', 'Restroscontroller@add');

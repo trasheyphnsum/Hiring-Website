@@ -22,6 +22,7 @@ class Restroscontroller extends Controller
     {
         
         return view('hire/contact');
+        
     }
     public function add(Request $request)
     {
