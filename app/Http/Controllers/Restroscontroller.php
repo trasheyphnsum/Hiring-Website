@@ -5,7 +5,6 @@ use App\Equipment;
 use App\Vehicle;
 use App\Register;
 use Illuminate\Http\Request;
-
 class Restroscontroller extends Controller
 {
     /**
@@ -62,17 +61,31 @@ class Restroscontroller extends Controller
 
     public function register(Request $request)
     {
-        $equip = new Register;
-        $equip->Name= $request->input('Name');
-        $equip->Email= $request->input('Email');
-        $equip->Phone_Number=$request->input('Phone_Number');
-        $equip->User_Name=$request->input('User_Name');
-        $equip->Password=$request->input('Password');
-        $equip->retype_password=$request->input('retype_password');
+        $user = new Register;
+        $user->Name= $request->input('Name');
+        $user->Email= $request->input('Email');
+        $user->Phone_Number=$request->input('Phone_Number');
+        $user->User_Name=$request->input('User_Name');
+        $user->Password=($request->input('Password')); 
+        $user->retype_password=$request->input('retype_password');
         $request->session()->flash('status','Successfully register');
-        $equip->save();
+        $user->save();
         return redirect('/');
+    
     }
+
+    //login 
+    public function login(Request $request)
+    {
+        $user = Register::where('Email',$request->input('Email'))-> get(); 
+        if(($user[0]->Password) == $request->input('Password')){
+
+            $request->session()->put('user', $user[0]->Name);
+            echo "login";
+            return redirect('/');
+        }
+    }
+
     //equipment view
     public function list()
     {
