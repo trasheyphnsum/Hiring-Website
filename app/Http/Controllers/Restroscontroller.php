@@ -81,7 +81,6 @@ class Restroscontroller extends Controller
         if(($user[0]->Password) == $request->input('Password')){
 
             $request->session()->put('user', $user[0]->Name);
-            echo "login";
             return redirect('/');
         }
     }

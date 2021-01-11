@@ -1,8 +1,9 @@
 @extends('layout')
 @section('content') 
-<div class="row justify-content-center" && class="col-4">
+<div class="row justify-content-center">
+    <div class="col-4">
         <h1>Contact Us</h1>
-        <p><strong>Got s question? We would love to solve your problem. Send us a message and 
+        <p><strong>Got question? We would love to solve your problem. Send us a message and 
         we will repond as soon as possible</strong></p>
         <form method="get" action="contact">
         @csrf
@@ -24,4 +25,5 @@
             <br><button type="submit" class="btn btn-primary">Send</button>
         </form>
     </div>
+</div>
 @endsection
