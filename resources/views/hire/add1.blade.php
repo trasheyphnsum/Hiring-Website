@@ -7,43 +7,70 @@
 </div>
 @endif
 <div class="row justify-content-center">
-    <div class="col-4">
-        <h1>Post your detail here</h1>
-        <form method="post" action="add1"  enctype="multipart/form-data">
-        {{ @csrf_field() }}
+    <aside class="col-sm-5">
+        <div class="card">
+        <article class="card-body">
+            <h4 class="card-title text-center mb-4 mt-1">You can post Your Equipment details</h4>
+            <hr>
+            <form>
+            {{ @csrf_field() }}
             <div class="form-group">
-                <label>Email address</label>
-                <input type="email" class="form-control" name ="email" placeholder="Enter email">
-            </div>
-            <div class="form-group">
-                <label >Phone Number</label>
-                <input type="phone" class="form-control" name="Phone_Number"  placeholder="Enter Phone Number">
-            </div>
-            <div class="form-group">
-                <label>Vehicle or Machiine</label>
-                <input type="text" class="form-control" name="Vehicle_Type"  placeholder="Enter Vehicle/machine Type">
-            </div>
-            <div class="form-group">
-                <label>Renting Price(Nu.)</label>
-                <input type="number" class="form-control" name="Price"  placeholder="Enter Renting Price">
-            </div>
-            <div class="form-group">
-                <label>Condition of your asset</label>
-                <input type="text" class="form-control" name="Condition"  placeholder="Enter vehicle/machine's Condition">
-            </div>
-            <div class="form-group">
-                <label>Location</label>
-                <input type="text"  class="form-control" name="Location"  placeholder="Enter Location of your vehicle/machine" >
-            </div>
-            <div class="form-group">
-                <label>Vehicle/Machine Photo</label>
-                <input type="file" class="form-control-file" name="Image">
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-    </div>
-</div>
+            <div class="input-group">
+                <label for="staticEmail" class="col-sm-3 col-form-label">Email</label>
+                <input type="email" class="form-control" name ="Email" placeholder="Enter Email">
+            </div> 
+            </div> 
 
+            <div class="form-group">
+            <div class="input-group">
+                <label for="PhoneNumber" class="col-sm-3 col-form-label">Phone No.</label>
+                <input type="Phone" class="form-control" name ="Phone_Number" placeholder="Enter your Phone number">
+            </div> 
+            </div> 
+
+            <div class="form-group">
+            <div class="input-group">
+                <label for="VehicletType" class="col-sm-3 col-form-label">Vehicle</label>
+                <input type="text" class="form-control" name ="Vehicle_type" placeholder="Enter vechile or Machine type">
+            </div> 
+            </div>
+
+            <div class="form-group">
+             <div class="input-group">
+                <label for="Price" class="col-sm-3 col-form-label">Price(Nu.)</label>
+                <input class="form-control" name="Price" placeholder="Enter Renting Price" type="number">
+            </div>
+            </div>
+
+            <div class="form-group">
+            <div class="input-group">
+                <label for="Condition" class="col-sm-3 col-form-label"> Condition</label>
+                <input class="form-control" name="Condition" placeholder="Enter your vehicle or machine condition" type="tetx">
+            </div>
+            </div>
+
+            <div class="form-group">
+            <div class="input-group">
+                <label for="Location" class="col-sm-3 col-form-label">Location</label>
+                <input class="form-control" name="Location" placeholder="Enter your vehicle Location" type="text">
+            </div>
+            </div>
+            
+            <div class="form-group">
+            <div class="input-group">
+                <label for="image" class="col-sm-3 col-form-label">Vehicle Image</label>
+                <input class="form-control" type="file" class="form-control-file" name="Image">
+            </div>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-lg float-right">Submit</button>
+            </div>
+            </form>
+        </article>
+        </div> 
+    </aside> 
+</div>
 <table class="table" id="t2">
 <h1>Vehicle</h1>
   <thead>

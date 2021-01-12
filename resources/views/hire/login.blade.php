@@ -7,7 +7,8 @@
             <h4 class="card-title text-center mb-4 mt-1">Sign in</h4>
             <hr>
             <p class="text-success text-center">Some message goes here</p>
-            <form>
+            <form  method="POST" action="login">
+            {{ @csrf_field() }}
             <div class="form-group">
             <div class="input-group">
                 <label for="staticEmail" class="col-sm-3 col-form-label">Email</label>
@@ -34,7 +35,6 @@
                     <div> 
                     </div>                     
                 </div>
-        </div>
             <p class="text-right"><a href="#" class="btn">Forgot password?</a></p>
             </form>
         </article>

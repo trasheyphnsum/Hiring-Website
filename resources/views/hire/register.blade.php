@@ -71,7 +71,6 @@
             <div class="form-group">
                 <button type="submit" class="btn btn-primary btn-lg float-right">Register</button>
             </div>
-        </div>
             </form>
         </article>
         </div> 
