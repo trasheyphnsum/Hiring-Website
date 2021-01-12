@@ -1,7 +1,7 @@
 @extends('layout')
 @section('content')
 <div class="col d-flex justify-content-center">
-    <aside class="col-sm-4">
+    <aside class="col-sm-5">
         <div class="card">
         <article class="card-body">
             <h4 class="card-title text-center mb-4 mt-1">Sign in</h4>
