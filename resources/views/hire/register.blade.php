@@ -1,17 +1,17 @@
 @extends('layout')
 @section('content')
-<div class="row justify-content-center">
+<div class="col d-flex justify-content-center">
     <aside class="col-sm-5">
         <div class="card">
         <article class="card-body">
             <h4 class="card-title text-center mb-4 mt-1">Sign up</h4>
             <hr>
             <p class="text-success text-center">Some message goes here</p>
-            <form>
+            <form method="POST" action="register">
             {{ @csrf_field() }}
             <div class="form-group">
             <div class="input-group">
-                <label for="staticEmail" class="col-sm-3 col-form-label">Name</label>
+                <label for="Name" class="col-sm-3 col-form-label">Name</label>
                 <div class="input-group-prepend">
                     <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                 </div>
@@ -31,7 +31,7 @@
 
             <div class="form-group">
             <div class="input-group">
-                <label for="staticEmail" class="col-sm-3 col-form-label">Phone No.</label>
+                <label for="PhoneNumber" class="col-sm-3 col-form-label">Phone No.</label>
                 <div class="input-group-prepend">
                     <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
                 </div>
@@ -41,7 +41,7 @@
 
             <div class="form-group">
             <div class="input-group">
-                <label for="staticEmail" class="col-sm-3 col-form-label">User name</label>
+                <label for="UserName" class="col-sm-3 col-form-label">User name</label>
                 <div class="input-group-prepend">
                     <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                 </div>
@@ -69,7 +69,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <button type="submit" class="btn btn-primary btn-lg float-right">Register</button>
+                <button type="submit" class="btn btn-primary btn-lg float-right">Sign up</button>
             </div>
             </form>
         </article>

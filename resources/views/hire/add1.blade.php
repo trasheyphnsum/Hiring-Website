@@ -6,13 +6,13 @@
     <button type="button" class="close" data-dismiss="alert">&times;</button>
 </div>
 @endif
-<div class="row justify-content-center">
+<div class="col d-flex justify-content-center">
     <aside class="col-sm-5">
         <div class="card">
         <article class="card-body">
-            <h4 class="card-title text-center mb-4 mt-1">You can post Your Equipment details</h4>
+            <h4 class="card-title text-center mb-4 mt-1">You can post Your Vehicle or Machine detail details</h4>
             <hr>
-            <form>
+            <form method="POST" action="add1">
             {{ @csrf_field() }}
             <div class="form-group">
             <div class="input-group">
@@ -71,7 +71,7 @@
         </div> 
     </aside> 
 </div>
-<table class="table" id="t2">
+<!-- <table class="table" id="t2">
 <h1>Vehicle</h1>
   <thead>
     <tr>
@@ -105,5 +105,5 @@
 $(document).ready( function () {
     $('#t2').DataTable();
 } );
-</script>
+</script> -->
 @endsection

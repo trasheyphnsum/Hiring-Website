@@ -1,6 +1,6 @@
 @extends('layout')
 @section('content')
-<div class="row justify-content-center">
+<div class="col d-flex justify-content-center">
     <aside class="col-sm-4">
         <div class="card">
         <article class="card-body">
@@ -24,7 +24,7 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
                 </div>
-                <input class="form-control" placeholder="******" type="password">
+                <input class="form-control" anme="Password" placeholder="******" type="password">
                 </div>
             </div> 
             <div class="container">
@@ -35,6 +35,7 @@
                     <div> 
                     </div>                     
                 </div>
+            </div>
             <p class="text-right"><a href="#" class="btn">Forgot password?</a></p>
             </form>
         </article>
