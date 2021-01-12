@@ -9,7 +9,7 @@
 <div class="row justify-content-center">
     <div class="col-4">
         <h1>Post your detail here</h1>
-        <form method="post" action="add1">
+        <form method="post" action="add1"  enctype="multipart/form-data">
         {{ @csrf_field() }}
             <div class="form-group">
                 <label>Email address</label>
@@ -68,7 +68,7 @@
       <td>{{$item ->Price}}</td>
       <td>{{$item ->Condition}}</td>
       <td>{{$item ->Location}}</td>
-      <td>{{$item ->Image}}</td>
+      <td>{{$item ->Image}} </td>
     </tr>
     @endforeach
   </tbody>

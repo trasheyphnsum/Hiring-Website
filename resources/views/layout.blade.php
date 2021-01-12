@@ -10,18 +10,19 @@
     <link rel="stylesheet" href = 'https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css'>
      <script src = 'https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js'></script>
      <script src = 'https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js'></script>
+    
+     
 </header>
 <body>
-<!--<div class="nav justify-content-center">-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Hiring Website</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-  <ul  class="navbar-nav mr-auto">
+  <ul  class="navbar-nav mr-auto" >
   <li class="nav-item">
-    <a class="nav-link" href="/">Home</a>
+    <a class="nav-link"  href="/">Home</a>
   </li>
   <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Category</a>
@@ -45,7 +46,7 @@
   </ul>
   <ul class="navbar-nav ml-auto">
   <li class="nav-item">
-  <a class="nav-link" href="/login">Login</a>
+  <a class="nav-link" href="/login" id="myBtn">Login</a>
   </li>
   <li class="nav-item ">
   <a class="nav-link" href="/register">Register</a>
@@ -53,7 +54,6 @@
 </ul>
   </div>
 </nav>
-<!-- </div>-->
     <div>
     @yield('content')
     </div>

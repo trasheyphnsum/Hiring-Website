@@ -19,9 +19,11 @@
                             <input type="password" class="form-control" name="Password"  placeholder="Enter Password">
                         </div>
                         <button type="submit" class="btn btn-primary">sign in</button>
-                    </form>   
+                    </form> 
+                    <p>Not a member? <a href="/register">Sign Up</a></p>
+                    <p>Forgot <a href="#">Password?</a></p>  
                 </div>
-            </div>
+            </div> 
         </div>
     </div>
 </div>

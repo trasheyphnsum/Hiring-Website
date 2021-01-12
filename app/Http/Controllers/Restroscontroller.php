@@ -33,7 +33,7 @@ class Restroscontroller extends Controller
         $equip->Price=$request->input('Price');
         $equip->Condition=$request->input('Condition');
         $equip->Location=$request->input('Location'); 
-        $equip->Image=$request->input('Image');
+        $equip->Image=$request->input('Image'); 
         $request->session()->flash('status','Your Post added Successfully');
         $equip->save();
         return redirect('/add');
