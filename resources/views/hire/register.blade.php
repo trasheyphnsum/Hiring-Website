@@ -1,40 +1,80 @@
 @extends('layout')
 @section('content')
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4">You can register here</h1>
-    <div class="row justify-content-center">
-        <div class="col-4">
-            <form method="post" action="register">
+<div class="row justify-content-center">
+    <aside class="col-sm-5">
+        <div class="card">
+        <article class="card-body">
+            <h4 class="card-title text-center mb-4 mt-1">Sign up</h4>
+            <hr>
+            <p class="text-success text-center">Some message goes here</p>
+            <form>
             {{ @csrf_field() }}
-                <div class="form-group">
-                    <label>Name</label>
-                    <input type="text" class="form-control" name ="Name" placeholder="Enter name">
+            <div class="form-group">
+            <div class="input-group">
+                <label for="staticEmail" class="col-sm-3 col-form-label">Name</label>
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                 </div>
-                <div class="form-group">
-                    <label>Email address</label>
-                    <input type="email" class="form-control" name ="Email" placeholder="Enter email">
+                <input type="text" class="form-control" name ="Name" placeholder="Enter name">
+            </div> 
+            </div> 
+
+            <div class="form-group">
+            <div class="input-group">
+                <label for="staticEmail" class="col-sm-3 col-form-label">Email</label>
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
                 </div>
-                <div class="form-group">
-                    <label >Phone Number</label>
-                    <input type="phone" class="form-control" name="Phone_Number"  placeholder="Enter Phone Number">
+                <input type="email" class="form-control" name ="Email" placeholder="Enter Email">
+            </div> 
+            </div> 
+
+            <div class="form-group">
+            <div class="input-group">
+                <label for="staticEmail" class="col-sm-3 col-form-label">Phone No.</label>
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
                 </div>
-                <div class="form-group">
-                    <label >User Name</label>
-                    <input type="text" class="form-control" name="User_Name"  placeholder="Enter user name">
+                <input type="Phone" class="form-control" name ="Phone_Number" placeholder="Enter your Phone number">
+            </div> 
+            </div> 
+
+            <div class="form-group">
+            <div class="input-group">
+                <label for="staticEmail" class="col-sm-3 col-form-label">User name</label>
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                 </div>
-                <div class="form-group">
-                    <label >Password</label>
-                    <input type="password" class="form-control" name="Password"  placeholder="Enter Password">
+                <input type="text" class="form-control" name ="User_Name" placeholder="Enter User name">
+            </div> 
+
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                <label for="inputPassword" class="col-sm-3 col-form-label">Password</label>
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
                 </div>
-                <div class="form-group">
-                    <label >Retype Password</label>
-                    <input type="password" class="form-control" name="retype_password"  placeholder="Enter password to confirm">
+                <input class="form-control" name="Password" placeholder="******" type="password">
                 </div>
-                <button type="submit" class="btn btn-primary">Sign Up</button>
-            </form>
+            </div>
+
+            <div class="form-group">
+                <div class="input-group">
+                <label for="inputPassword" class="col-sm-3 col-form-label"> Confirm</label>
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                </div>
+                <input class="form-control" name="retype_password" placeholder="Once more type Again Your password" type="password">
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-lg float-right">Register</button>
+            </div>
         </div>
-    </div>
-    </div>
+            </form>
+        </article>
+        </div> 
+    </aside> 
 </div>
 @endsection
