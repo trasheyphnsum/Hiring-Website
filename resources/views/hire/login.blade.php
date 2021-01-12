@@ -1,26 +1,44 @@
 @extends('layout')
 @section('content')
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4">User Login</h1>
-    <div class="row justify-content-center">
-        <div class="col-4">
-            <form method="post" action="login">
-                {{ @csrf_field() }}
-                <div class="form-group">
-                    <label>Email</label>
-                    <input type="email" class="form-control" name ="Email" placeholder="Enter email">
+<div class="row justify-content-center">
+    <aside class="col-sm-4">
+        <div class="card">
+        <article class="card-body">
+            <h4 class="card-title text-center mb-4 mt-1">Sign in</h4>
+            <hr>
+            <p class="text-success text-center">Some message goes here</p>
+            <form>
+            <div class="form-group">
+            <div class="input-group">
+                <label for="staticEmail" class="col-sm-3 col-form-label">Email</label>
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                 </div>
-                <div class="form-group">
-                    <label >Password</label>
-                    <input type="password" class="form-control" name="Password"  placeholder="Enter Password">
+                <input name="" class="form-control" placeholder="Email or login" type="email">
+            </div> 
+            </div> 
+            <div class="form-group">
+                <div class="input-group">
+                <label for="inputPassword" class="col-sm-3 col-form-label">Password</label>
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
                 </div>
-                <button type="submit" class="btn btn-primary">sign in</button>
-            </form> 
-            <p>Not a member? <a href="/register">Sign Up</a></p>
-            <p>Forgot <a href="#">Password?</a></p>  
+                <input class="form-control" placeholder="******" type="password">
+                </div>
+            </div> 
+            <div class="container">
+                <div class="row">
+                    <div class="col text-center">
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary"> Login  </button>
+                    <div> 
+                    </div>                     
+                </div>
         </div>
-    </div> 
-    </div>
+            <p class="text-right"><a href="#" class="btn">Forgot password?</a></p>
+            </form>
+        </article>
+        </div> 
+    </aside> 
 </div>
 @endsection
