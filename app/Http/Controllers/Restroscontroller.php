@@ -79,9 +79,8 @@ class Restroscontroller extends Controller
     {
         $user = Register::where('Email',$request->input('Email'))-> get(); 
         if(($user[0]->Password) == $request->input('Password')){
-
-            $request->session()->put('user', $user[0]->Name);
             return redirect('/');
+
         }
     }
 
