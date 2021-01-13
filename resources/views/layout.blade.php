@@ -8,6 +8,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <!-- Image icon -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    
 </header>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-primary" data-toggle="collapse">
@@ -33,8 +34,13 @@
       <a class="dropdown-item" href="#">Technician</a>
     </div>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="/reserve">Reservation</a>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Reservation</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="{{route('list_equipment')}}">Equipment</a>
+      <a class="dropdown-item" href="{{route('list_machine')}}">Machine or Vehicle</a>
+      <a class="dropdown-item" href="#">Human Resource</a>
+    </div>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="#"> Services</a>

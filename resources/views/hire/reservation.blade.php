@@ -1,53 +1,69 @@
 @extends('layout')
 @section('content')
-<div class="card hovercard">
-    <div class="cardheader">               
-		<div class="avatar">
-            @foreach ($record as $re)
-                <img alt="" src="{{ URL::to('/') }}/images/{{$re['Image']}}">
-            @endforeach
-		</div>
-	</div>
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-12">
+        @if(Session::get('message')=='equipment')
+          <h2 class="text-center"> Equipment Available<h2>
+        @else 
+            <h2 class="text-center"> Machine/Vehicle Available<h2>
+        @endif
+
+            
+        </div>
+    </div>
+    <div class="row mt-4">
+    @foreach ($record as $re)
+        <div class="col-md-4" style="margin-bottom:10px">
+            <div class="card">
+                <div class="card-body">
+                    <img alt=""  class ="card-img-top"src="{{ URL::to('/') }}/images/{{$re['Image']}}" width="300px" height="200px">
+                    @if(Session::get('message')=='equipment')
+                    <h4 class="card-title text-center mb-4 mt-1">{{$re->Equipment_Type}}</h4>
+                    @else
+                    <h4 class="card-title text-center mb-4 mt-1">{{$re->Vehicle_Type}}</h4>
+                    @endif
+                    <hr>
+                    <p class ="card-text">Email:{{$re->email}}</p>
+                    <p class ="card-text">Phone Number:{{$re->Phone_Number}}</p>
+                    <p class ="card-text">Renting Price:{{$re->Price}}</p>
+                    <p class ="card-text">Condition:{{$re->Condition}}</p>
+                    <p class ="card-text">Location:{{$re->Location}}</p>
+                </div>
+                <div class="text-right">
+                <button type="submit" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#popUpWindow">Book</button>  
+                </div>                  
+            </div>
+        </div>
+    @endforeach
+    </div>
+    {{$record->links()}}
+</div> 
+<div class="container">
+    <div class="modal fade" id="popUpWindow">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- header -->
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h3 class="modal-title">Reservation Form</h3>
+            </div>
+            <!-- body -->
+            <div class="modal-header">
+            <form role="form" method="post" action="">
+                <div class="form-group">
+                <input type="email" class="form-control" placeholder="Email"/>
+                <input type="password" class="form-control" placeholder="Password" />
+                </div>
+            </form>
+            </div>
+            <!-- footer -->
+            <div class="modal-footer">
+            <button class="btn btn-primary btn-block">Log In</button>
+            </div>
+        </div>
+        </div>
+    </div>
 </div>
 
-<aside class="col-sm-5">
-        <div class="card">
-        <article class="card-body">
-            <h4 class="card-title text-center mb-4 mt-1">Sign in</h4>
-            <hr>
-            <p class="text-success text-center">Some message goes here</p>
-            <form  method="POST" action="login">
-            {{ @csrf_field() }}
-            <div class="form-group">
-            <div class="input-group">
-                <label for="staticEmail" class="col-sm-3 col-form-label">Email</label>
-                <div class="input-group-prepend">
-                    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
-                </div>
-                <input name="" class="form-control" placeholder="Email or login" type="email">
-            </div> 
-            </div> 
-            <div class="form-group">
-                <div class="input-group">
-                <label for="inputPassword" class="col-sm-3 col-form-label">Password</label>
-                <div class="input-group-prepend">
-                    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
-                </div>
-                <input class="form-control" name="Password" placeholder="******" type="password">
-                </div>
-            </div> 
-            <div class="container">
-                <div class="row">
-                    <div class="col text-center">
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-primary"> Login  </button>
-                    <div> 
-                    </div>                     
-                </div>
-            </div>
-            <p class="text-right"><a href="#" class="btn">Forgot password?</a></p>
-            </form>
-        </article>
-        </div> 
-    </aside> 
 @endsection

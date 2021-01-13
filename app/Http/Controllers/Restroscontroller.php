@@ -5,6 +5,8 @@ use App\Equipment;
 use App\Vehicle;
 use App\Register;
 use Illuminate\Http\Request;
+use Session;
+//use Illuminate\Support\Facades\DB;
 class Restroscontroller extends Controller
 {
     /**
@@ -50,15 +52,17 @@ class Restroscontroller extends Controller
 
     public function add1(Request $request)
     {
-        // return $request->input();
+        $imageName = time().'.'.$request->Image->extension(); 
+        $request->Image->move(public_path('images'), $imageName);
+
         $equip = new Vehicle;
-        $equip->email= $request->input('email');
+        $equip->email= $request->input('Email');
         $equip->Phone_Number=$request->input('Phone_Number');
         $equip->Vehicle_Type=$request->input('Vehicle_Type');
         $equip->Price=$request->input('Price');
         $equip->Condition=$request->input('Condition');
         $equip->Location=$request->input('Location'); 
-        $equip->Image=$request->input('Image');
+        $equip->Image=$imageName;
         $request->session()->flash('status','Your Post added Successfully');
         $equip->save();
         return redirect('/add1');
@@ -94,15 +98,17 @@ class Restroscontroller extends Controller
     //equipment view
     public function list()
     {
-        $record = Equipment::all();
+        $record = Equipment::paginate(3);
+        Session::flash('message','equipment');
         return view('hire/reservation',["record"=>$record]);
-    }
+     }
 
     //vehicle view
     public function list1()
     {
-        $data = Vehicle::all();
-        return view('hire/add1',["data"=>$data]);
+        $record = Vehicle::paginate(3);
+        Session::flash('message','vehicle');
+        return view('hire/reservation',["record"=>$record]);
     }
 
 

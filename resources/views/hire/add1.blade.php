@@ -13,7 +13,7 @@
             <h4 class="card-title text-center mb-4 mt-1">You can post Your Vehicle or Machine detail details</h4>
             <hr>
             <form method="POST" action="add1" enctype="multipart/form-data">
-            {{ @csrf_field() }}
+            @csrf
             <div class="form-group">
             <div class="input-group">
                 <label for="staticEmail" class="col-sm-3 col-form-label">Email</label>
@@ -71,39 +71,5 @@
         </div> 
     </aside> 
 </div>
-<!-- <table class="table" id="t2">
-<h1>Vehicle</h1>
-  <thead>
-    <tr>
-      <th scope="col">id</th>
-      <th scope="col">Email</th>
-      <th scope="col">Phone Number</th>
-      <th scope="col">Vehicle Type</th>
-      <th scope="col">Renting Price</th>
-      <th scope="col">Condition Of Assets</th>
-      <th scope="col">Location of Assets</th>
-      <th scope="col">Image of Assets</th>
-    </tr>
-  </thead>
-  <tbody>
-  @foreach($data as $item)
-    <tr>
-      <th scope="row">{{$item -> id}}</th>
-      <td>{{$item ->email}}</td>
-      <td>{{$item ->Phone_Number}}</td>
-      <td>{{$item ->Vehicle_Type}}</td>
-      <td>{{$item ->Price}}</td>
-      <td>{{$item ->Condition}}</td>
-      <td>{{$item ->Location}}</td>
-      <td>{{$item ->Image}} </td>
-    </tr>
-    @endforeach
-  </tbody>
-</table>
 
-<script>
-$(document).ready( function () {
-    $('#t2').DataTable();
-} );
-</script> -->
 @endsection

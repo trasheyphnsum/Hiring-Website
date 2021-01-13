@@ -31,10 +31,10 @@ Route::get('/list_equipment', 'Restroscontroller@list')->name('list_equipment');
 //Vehicle or machine
 Route::view('/add1', 'hire/add1');
 Route::post('/add1', 'Restroscontroller@add1');
-Route::get('/add1', 'Restroscontroller@list1');
 
-//Reservation
-Route::view('/reserve', 'hire/reservation');
+
+Route::get('/list_machine', 'Restroscontroller@list1')->name('list_machine');
+
 
 //register
 Route::view('/register', 'hire/register');
