@@ -12,7 +12,7 @@
         <article class="card-body">
             <h4 class="card-title text-center mb-4 mt-1">You can post Your Vehicle or Machine detail details</h4>
             <hr>
-            <form method="POST" action="add1">
+            <form method="POST" action="add1" enctype="multipart/form-data">
             {{ @csrf_field() }}
             <div class="form-group">
             <div class="input-group">

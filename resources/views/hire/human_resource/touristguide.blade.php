@@ -10,7 +10,7 @@
     <aside class="col-sm-5">
         <div class="card">
         <article class="card-body">
-            <h4 class="card-title text-center mb-4 mt-1">You can post Your Equipment details</h4>
+            <h4 class="card-title text-center mb-4 mt-1">You can post document here</h4>
             <hr>
             <form method="post" action="{{route('add_equipment')}}" enctype="multipart/form-data">
             {{ @csrf_field() }}
@@ -71,6 +71,4 @@
         </div> 
     </aside> 
 </div>
-
-
 @endsection

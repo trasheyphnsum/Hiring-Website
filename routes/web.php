@@ -24,14 +24,17 @@ Route::get('/contact', 'Restroscontroller@contact');
 
 //Equipments
 Route::view('/add', 'hire/add');
-Route::post('/add', 'Restroscontroller@add');
-Route::get('/add', 'Restroscontroller@list');
+Route::post('/add_equipment', 'Restroscontroller@add')->name('add_equipment');
+Route::get('/list_equipment', 'Restroscontroller@list')->name('list_equipment');
+
 
 //Vehicle or machine
 Route::view('/add1', 'hire/add1');
 Route::post('/add1', 'Restroscontroller@add1');
 Route::get('/add1', 'Restroscontroller@list1');
 
+//Reservation
+Route::view('/reserve', 'hire/reservation');
 
 //register
 Route::view('/register', 'hire/register');
@@ -39,7 +42,7 @@ Route::post('/register', 'Restroscontroller@register');
 
 //register
 Route::view('/login', 'hire/login');
-Route::post('/login', 'Restroscontroller@login');
+Route::post('/login', 'Restroscontroller@login')->name('user_login');
 
 //Products
 //Route::resource('products','ProductController');

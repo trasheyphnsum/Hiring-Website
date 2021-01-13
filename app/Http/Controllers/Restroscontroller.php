@@ -26,17 +26,24 @@ class Restroscontroller extends Controller
     public function add(Request $request)
     {
         // return $request->input();
+        // $request->validate([
+        //     'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        // ]);
+        $imageName = time().'.'.$request->Image->extension(); 
+        $request->Image->move(public_path('images'), $imageName);
+
         $equip = new Equipment;
-        $equip->email= $request->input('email');
+        $equip->email= $request->input('Email1');
         $equip->Phone_Number=$request->input('Phone_Number');
         $equip->Equipment_Type=$request->input('Equipment_Type');
         $equip->Price=$request->input('Price');
         $equip->Condition=$request->input('Condition');
         $equip->Location=$request->input('Location'); 
-        $equip->Image=$request->input('Image'); 
+        
+        $equip->Image=$imageName; 
         $request->session()->flash('status','Your Post added Successfully');
         $equip->save();
-        return redirect('/add');
+        return redirect()->route('list_equipment');
     }
 
     //vehivle machinaries
@@ -87,12 +94,11 @@ class Restroscontroller extends Controller
     //equipment view
     public function list()
     {
-        $data = Equipment::all();
-        return view('hire/add',["data"=>$data]);
+        $record = Equipment::all();
+        return view('hire/reservation',["record"=>$record]);
     }
 
     //vehicle view
-
     public function list1()
     {
         $data = Vehicle::all();
