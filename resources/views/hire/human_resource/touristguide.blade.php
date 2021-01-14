@@ -14,24 +14,18 @@
             <hr>
             <form method="post" action="{{route('add_equipment')}}" enctype="multipart/form-data">
             {{ @csrf_field() }}
-            <div class="form-group">
-            <div class="input-group">
-                <label for="staticEmail" class="col-sm-3 col-form-label">Email</label>
-                <input type="email" class="form-control" name ="Email1" placeholder="Enter Email">
-            </div> 
-            </div> 
 
             <div class="form-group">
             <div class="input-group">
-                <label for="PhoneNumber" class="col-sm-3 col-form-label">Phone No.</label>
-                <input type="Phone" class="form-control" name ="Phone_Number" placeholder="Enter your Phone number">
+                <label for="Experience" class="col-sm-3 col-form-label">Experience</label>
+                <input type="text" class="form-control" name ="Experience" placeholder="Enter Experience">
             </div> 
-            </div> 
+            </div>
 
             <div class="form-group">
             <div class="input-group">
-                <label for="EquipmentType" class="col-sm-3 col-form-label">Asset Type</label>
-                <input type="text" class="form-control" name ="Equipment_Type" placeholder="Enter equipment type">
+                <label for="Skill" class="col-sm-3 col-form-label">Skill</label>
+                <input type="text" class="form-control" name ="Skill" placeholder="Enter Skill">
             </div> 
             </div>
 

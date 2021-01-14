@@ -38,7 +38,9 @@
     @endforeach
     </div>
     {{$record->links()}}
-</div> 
+</div>
+
+<!-- popup Reservation form -->
 <div class="container">
     <div class="modal fade" id="popUpWindow">
         <div class="modal-dialog">
@@ -51,10 +53,17 @@
             <!-- body -->
             <div class="modal-header">
             <form role="form" method="post" action="">
-                <div class="form-group">
-                <input type="email" class="form-control" placeholder="Email"/>
-                <input type="password" class="form-control" placeholder="Password" />
+
+            <div class="form-group">
+                <div class="input-group">
+                <label for="inputPassword" class="col-sm-3 col-form-label">Password</label>
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
                 </div>
+                <input class="form-control" name="Password" placeholder="******" type="password">
+                </div>
+            </div>
+             
             </form>
             </div>
             <!-- footer -->

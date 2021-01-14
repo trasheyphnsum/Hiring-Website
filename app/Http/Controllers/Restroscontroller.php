@@ -79,7 +79,7 @@ class Restroscontroller extends Controller
         $user->User_Name=$request->input('User_Name');
         $user->Password=($request->input('Password')); 
         $user->retype_password=$request->input('retype_password');
-        $request->session()->flash('status','Successfully register');
+        $request->session()->flash('status','Successfully registered');
         $user->save();
         return redirect('/');
     

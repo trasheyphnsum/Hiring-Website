@@ -17,8 +17,11 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
+//Home page
+Route::view('/', 'hire/home');
+
 //Hiring Website
-Route::get('/', 'Restroscontroller@index');
+Route::get('/contact', 'Restroscontroller@index');
 Route::get('/contact', 'Restroscontroller@contact');
 
 
@@ -31,8 +34,6 @@ Route::get('/list_equipment', 'Restroscontroller@list')->name('list_equipment');
 //Vehicle or machine
 Route::view('/add1', 'hire/add1');
 Route::post('/add1', 'Restroscontroller@add1');
-
-
 Route::get('/list_machine', 'Restroscontroller@list1')->name('list_machine');
 
 
@@ -40,7 +41,7 @@ Route::get('/list_machine', 'Restroscontroller@list1')->name('list_machine');
 Route::view('/register', 'hire/register');
 Route::post('/register', 'Restroscontroller@register');
 
-//register
+//Login
 Route::view('/login', 'hire/login');
 Route::post('/login', 'Restroscontroller@login')->name('user_login');
 
