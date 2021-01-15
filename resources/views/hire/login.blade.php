@@ -1,6 +1,6 @@
 @extends('layout')
 @section('content')
-<div class="row justify-content-center">
+<div class="row justify-content-center" id="text">
     <aside class="col-sm-6">
         <div class="card">
         <article class="card-body">

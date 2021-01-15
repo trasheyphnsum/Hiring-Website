@@ -6,7 +6,7 @@
     <button type="button" class="close" data-dismiss="alert">&times;</button>
 </div>
 @endif
-<div class="col d-flex justify-content-center">
+<div class="col d-flex justify-content-center" id="text">
     <aside class="col-sm-6">
         <div class="card">
         <article class="card-body">

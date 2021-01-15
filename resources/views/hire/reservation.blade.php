@@ -41,7 +41,7 @@
 </div>
 
 <!-- popup Reservation form -->
-<div class="container">
+<div class="container" id="text">
     <div class="modal fade" id="popUpWindow">
         <div class="modal-dialog">
         <div class="modal-content">
