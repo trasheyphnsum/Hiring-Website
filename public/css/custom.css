@@ -1,7 +1,26 @@
+
+/* driver form(Dropdown-select) */
 #select-width{
     width: 451px;
     height: 40px;
     border-color:#DCE0DF;
-    border-top-right-radius: 5px ;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
     margin-right: 2px;
+}
+
+/* Reservation form(datepicker) */
+#date{
+    width: 270px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-color:#DCE0DF;
+}
+
+/* Reservation form(timepicker) */
+#time{
+    width: 268px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-color:#DCE0DF;
 }

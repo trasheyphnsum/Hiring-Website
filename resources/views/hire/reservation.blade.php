@@ -86,7 +86,7 @@
             
             <div class="form-group">
             <div class="input-group">
-                <label for="PickupLocation" class="col-sm-4 col-form-label">Pick up </label>
+                <label for="PickupLocation" class="col-sm-4 col-form-label">Pick up Location </label>
                 <div class="input-group-prepend">
                     <span class="input-group-text"> <i class="fa fa-map-marker"></i> </span>
                 </div>
@@ -96,7 +96,7 @@
 
             <div class="form-group">
             <div class="input-group">
-                <label for="dropLocation" class="col-sm-4 col-form-label">Drop</label>
+                <label for="dropLocation" class="col-sm-4 col-form-label">Drop Location</label>
                 <div class="input-group-prepend">
                     <span class="input-group-text"> <i class="fa fa-map-marker"></i> </span>
                 </div>
@@ -106,11 +106,11 @@
 
             <div class="form-group">
             <div class="input-group">
-                <label for="pickdate" class="col-sm-4 col-form-label">Pick Date</label>
+                <label for="pickdate" class="col-sm-4 col-form-label">Pick up Date</label>
                 <div class="input-group-prepend">
                     <span class="input-group-text"> <i class="fa fa-calendar"></i> </span>
                 </div>
-                <input type="date" name="pickDate">
+                <input type="date" name="pickDate" id="Date" >
             </div>
             </div>
 
@@ -120,27 +120,27 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text"> <i class="fa fa-calendar"></i> </span>
                 </div>
-                <input type="date" name="dropDate">
+                <input type="date" name="dropDate" id="date">
             </div>
             </div>
             
             <div class="form-group">
             <div class="input-group">
-                <label for="pickdate" class="col-sm-4 col-form-label">Drop Date</label>
+                <label for="pickdate" class="col-sm-4 col-form-label">pick up Time</label>
                 <div class="input-group-prepend">
                     <span class="input-group-text"> <i class="fa fa-clock"></i> </span>
                 </div>
-                <input type="time" name="PickTime">
+                <input type="time" name="PickTime" id="time">
             </div>
             </div>
 
             <div class="form-group">
             <div class="input-group">
-                <label for="pickdate" class="col-sm-4 col-form-label">Drop Date</label>
+                <label for="pickdate" class="col-sm-4 col-form-label">Drop Time</label>
                 <div class="input-group-prepend">
                     <span class="input-group-text"> <i class="fa fa-clock"></i> </span>
                 </div>
-                <input type="time" name="dropTime">
+                <input type="time" name="dropTime" id="time">
             </div>
             </div>
 
@@ -148,7 +148,7 @@
             <div class="form-check mb-2">
                 <input class="form-check-input" type="checkbox" id="autoSizingCheck">
                 <label class="form-check-label" for="autoSizingCheck">
-                
+                By, checking the box, you agreed to the terms and condition between you and the owner. 
                 </label>
             </div>
             </div>
@@ -157,7 +157,7 @@
             </div>
             <!-- footer -->
             <div class="modal-footer">
-            <button class="btn btn-primary btn-block">Log In</button>
+            <button class="btn btn-primary btn-lg float-right">Submit</button>
             </div>
         </div>
         </div>
