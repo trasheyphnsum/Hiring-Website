@@ -65,7 +65,7 @@ class Restroscontroller extends Controller
         $equip->Image=$imageName;
         $request->session()->flash('status','Your Post added Successfully');
         $equip->save();
-        return redirect('/add1');
+        return redirect()->route('list_machine');
     }
 
     //Register

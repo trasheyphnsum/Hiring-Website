@@ -7,18 +7,18 @@
 </div>
 @endif
 <div class="col d-flex justify-content-center">
-    <aside class="col-sm-5">
+    <aside class="col-sm-6">
         <div class="card">
         <article class="card-body">
             <h4 class="card-title text-center mb-4 mt-1">You can post document(Tuituin Tutuor) here</h4>
             <hr>
-            <form method="post" action="{{route('')}}" enctype="multipart/form-data">
+            <form method="post" action="/tutor" enctype="multipart/form-data">
             {{ @csrf_field() }}
 
             <div class="form-group">
             <div class="input-group">
-                <label for="Experienceskill" class="col-sm-3 col-form-label">Experience or Skill</label>
-                <input type="text" class="form-control" name ="Experience" placeholder="Enter  Your Experience  or skill">
+                <label for="Experienceskill" class="col-sm-3 col-form-label">Experience/Skill</label>
+                <input type="text" class="form-control" name ="Experience" placeholder="Enter your Experience or skill">
             </div> 
             </div>
 
@@ -31,7 +31,7 @@
 
             <div class="form-group"> 
              <div class="input-group">
-                <label for="servicePrice" class="col-sm-3 col-form-label">Service Charge(Nu.)</label>
+                <label for="servicePrice" class="col-sm-3 col-form-label">Charge(Nu)</label>
                 <input class="form-control" name="serviceCharge" placeholder="Enter Service charge" type="number">
             </div>
             </div>

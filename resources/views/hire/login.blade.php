@@ -1,13 +1,13 @@
 @extends('layout')
 @section('content')
 <div class="row justify-content-center">
-    <aside class="col-sm-5">
+    <aside class="col-sm-6">
         <div class="card">
         <article class="card-body">
             <h4 class="card-title text-center mb-4 mt-1">Sign in</h4>
             <hr>
             <p class="text-success text-center">Some message goes here</p>
-            <form  method="POST" action="{{route('user_login')}}">
+            <form  method="POST" action="/login">
             {{ @csrf_field() }}
             <div class="form-group">
             <div class="input-group">

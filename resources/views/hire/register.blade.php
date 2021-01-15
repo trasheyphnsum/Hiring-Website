@@ -7,7 +7,7 @@
 </div>
 @endif
 <div class="col d-flex justify-content-center">
-    <aside class="col-sm-5">
+    <aside class="col-sm-6">
         <div class="card">
         <article class="card-body">
             <h4 class="card-title text-center mb-4 mt-1">Sign up</h4>

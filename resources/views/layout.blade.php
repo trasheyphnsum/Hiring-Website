@@ -8,6 +8,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <!-- Image icon -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="{{ URL::asset('css/custom.css') }}">
 
 </header>
 <body>
@@ -28,10 +30,10 @@
       <a class="dropdown-item" href="/add1">Machine or Vehicle</a>
       <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Human Resources</a>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Tourist Guide</a>
-      <a class="dropdown-item" href="#">Driver(Vehicle or Machine)</a>
-      <a class="dropdown-item" href="#">Tuition Tutor</a>
-      <a class="dropdown-item" href="#">Technician</a>
+      <a class="dropdown-item" href="/guide">Tourist Guide</a>
+      <a class="dropdown-item" href="/driver">Driver(Vehicle or Machine)</a>
+      <a class="dropdown-item" href="/tutor">Tuition Tutor</a>
+      <a class="dropdown-item" href="/tech">Technician</a>
     </div>
   </li>
   <li class="nav-item dropdown">
@@ -51,7 +53,7 @@
   </ul>
   <ul class="navbar-nav ml-auto">
   <li class="nav-item">
-  <a class="nav-link" href="/login" id="myBtn">Login</a>
+  <a class="nav-link" href="/login">Login</a>
   </li>
   <li class="nav-item ">
   <a class="nav-link" href="/register">Register</a>

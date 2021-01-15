@@ -43,7 +43,19 @@ Route::post('/register', 'Restroscontroller@register');
 
 //Login
 Route::view('/login', 'hire/login');
-Route::post('/login', 'Restroscontroller@login')->name('user_login');
+Route::post('/login', 'Restroscontroller@login');
+
+//Tourist Guide
+Route::view('/guide', 'hire/touristguide');
+
+//Driver
+Route::view('/driver', 'hire/driver');
+
+//Tuition tutor
+Route::view('/tutor', 'hire/tutor');
+
+//Technician
+Route::view('/tech', 'hire/technician');
 
 //Products
 //Route::resource('products','ProductController');

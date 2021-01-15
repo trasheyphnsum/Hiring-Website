@@ -7,7 +7,7 @@
 </div>
 @endif
 <div class="col d-flex justify-content-center">
-    <aside class="col-sm-5">
+    <aside class="col-sm-6">
         <div class="card">
         <article class="card-body">
             <h4 class="card-title text-center mb-4 mt-1">You can post document(Driver) here</h4>
@@ -22,36 +22,31 @@
             </div> 
             </div>
             <div class="form-group">
-            <label for="Drivertype" class="col-sm-3 col-form-label">Driver License Type(selcet any one)</label>
-                <select class="form-control" id="sel1">
+            <label for="Drivertype" class="col-sm-3 col-form-label">License Type</label>
+            <select class="dropdown-form" id="select-width">
                     <option>Two-wheeler</option>
                     <option>Light vehicle</option>
                     <option>Medium vehicle</option>
-                    <option>Heavy vehicle
-                        <select>
+                    <optgroup class="dropdown-form" label ="Heavy vehicle">
                         <option>Six-wheeler</option>
                         <option>Ten-wheeler</option>
                         <option>Eighteen-wheeler</option>
-                        </select>
-                    </option>
-                    <option>Passenger transport vehicle
-                        <select>
+                    </optgroup>
+
+                    <optgroup class="dropdown-form" label ="Passenger transport vehicle">
                         <option>Taxi</option>
                         <option>Medium Bus</option>
                         <option>Heavy Bus</option>
-                        </select>
-                    </option>
-                    <option>Heavy earth-moving equipment
-                        <select>
+                    </optgroup>
+                    <optgroup class="dropdown-form" label="Heavy earth-moving equipment">
                         <option>Bull Dozer</option>
                         <option>Excavator</option>
                         <option>Pay Loader</option>
-                        </select>
-                    </option>
+                    </optgroup>
                     <option>Road Roller</option>
                     <option>Tractor</option>
                     <option>Power Tiller</option>
-                </select>
+            </select>
             </div>
 
             <div class="form-group">
@@ -63,7 +58,7 @@
 
             <div class="form-group"> 
              <div class="input-group">
-                <label for="servicePrice" class="col-sm-3 col-form-label">Service Charge(Nu.)</label>
+                <label for="servicePrice" class="col-sm-3 col-form-label">Charge(Nu.)</label>
                 <input class="form-control" name="serviceCharge" placeholder="Enter Service charge" type="number">
             </div>
             </div>
@@ -90,3 +85,4 @@
         </div> 
     </aside> 
 </div>
+@endsection
