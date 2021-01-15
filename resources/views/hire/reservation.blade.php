@@ -55,13 +55,102 @@
             <form role="form" method="post" action="">
 
             <div class="form-group">
-                <div class="input-group">
-                <label for="inputPassword" class="col-sm-3 col-form-label">Password</label>
+            <div class="input-group">
+                <label for="Name" class="col-sm-4 col-form-label">Name</label>
                 <div class="input-group-prepend">
-                    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                 </div>
-                <input class="form-control" name="Password" placeholder="******" type="password">
+                <input type="text" class="form-control" name ="Name" placeholder="Enter name">
+            </div> 
+            </div> 
+
+            <div class="form-group">
+            <div class="input-group">
+                <label for="staticEmail" class="col-sm-4 col-form-label">Email</label>
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
                 </div>
+                <input type="email" class="form-control" name ="Email" placeholder="Enter Email">
+            </div> 
+            </div> 
+
+            <div class="form-group">
+            <div class="input-group">
+                <label for="PhoneNumber" class="col-sm-4 col-form-label">Phone No.</label>
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+                </div>
+                <input type="Phone" class="form-control" name ="Phone_Number" placeholder="Enter your Phone number">
+            </div> 
+            </div>
+            
+            <div class="form-group">
+            <div class="input-group">
+                <label for="PickupLocation" class="col-sm-4 col-form-label">Pick up </label>
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-map-marker"></i> </span>
+                </div>
+                <input type="text" class="form-control" name ="pickup" placeholder="Enter pickup location">
+            </div> 
+            </div> 
+
+            <div class="form-group">
+            <div class="input-group">
+                <label for="dropLocation" class="col-sm-4 col-form-label">Drop</label>
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-map-marker"></i> </span>
+                </div>
+                <input type="text" class="form-control" name ="drop" placeholder="Enter drop location">
+            </div> 
+            </div> 
+
+            <div class="form-group">
+            <div class="input-group">
+                <label for="pickdate" class="col-sm-4 col-form-label">Pick Date</label>
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-calendar"></i> </span>
+                </div>
+                <input type="date" name="pickDate">
+            </div>
+            </div>
+
+            <div class="form-group">
+            <div class="input-group">
+                <label for="pickdate" class="col-sm-4 col-form-label">Drop Date</label>
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-calendar"></i> </span>
+                </div>
+                <input type="date" name="dropDate">
+            </div>
+            </div>
+            
+            <div class="form-group">
+            <div class="input-group">
+                <label for="pickdate" class="col-sm-4 col-form-label">Drop Date</label>
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-clock"></i> </span>
+                </div>
+                <input type="time" name="PickTime">
+            </div>
+            </div>
+
+            <div class="form-group">
+            <div class="input-group">
+                <label for="pickdate" class="col-sm-4 col-form-label">Drop Date</label>
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-clock"></i> </span>
+                </div>
+                <input type="time" name="dropTime">
+            </div>
+            </div>
+
+            <div class="col-auto">
+            <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" id="autoSizingCheck">
+                <label class="form-check-label" for="autoSizingCheck">
+                
+                </label>
+            </div>
             </div>
              
             </form>
