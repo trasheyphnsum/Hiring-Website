@@ -9,17 +9,6 @@
     <!-- Image icon -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
 
-    <style>
-      body {
-        min-height: 100vh; 
-    }
-
-  .flex-grow {
-    flex: 1;
-  }
-
-    </style>
-    
 </header>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-primary" data-toggle="collapse">
