@@ -10,36 +10,36 @@
     <aside class="col-sm-5">
         <div class="card">
         <article class="card-body">
-            <h4 class="card-title text-center mb-4 mt-1">You can post document here</h4>
+            <h4 class="card-title text-center mb-4 mt-1">You can post document(Tuituin Tutuor) here</h4>
             <hr>
-            <form method="post" action="{{route('add_equipment')}}" enctype="multipart/form-data">
+            <form method="post" action="{{route('')}}" enctype="multipart/form-data">
             {{ @csrf_field() }}
 
             <div class="form-group">
             <div class="input-group">
-                <label for="Experience" class="col-sm-3 col-form-label">Experience</label>
-                <input type="text" class="form-control" name ="Experience" placeholder="Enter Experience">
+                <label for="Experienceskill" class="col-sm-3 col-form-label">Experience or Skill</label>
+                <input type="text" class="form-control" name ="Experience" placeholder="Enter  Your Experience  or skill">
             </div> 
             </div>
 
             <div class="form-group">
             <div class="input-group">
-                <label for="Skill" class="col-sm-3 col-form-label">Skill</label>
-                <input type="text" class="form-control" name ="Skill" placeholder="Enter Skill">
+                <label for="Qualification" class="col-sm-3 col-form-label">Qualification</label>
+                <input type="text" class="form-control" name ="Skill" placeholder="Enter Your Qualification">
             </div> 
             </div>
 
-            <div class="form-group">
+            <div class="form-group"> 
              <div class="input-group">
-                <label for="Price" class="col-sm-3 col-form-label">Price(Nu.)</label>
-                <input class="form-control" name="Price" placeholder="Enter Renting Price" type="number">
+                <label for="servicePrice" class="col-sm-3 col-form-label">Service Charge(Nu.)</label>
+                <input class="form-control" name="serviceCharge" placeholder="Enter Service charge" type="number">
             </div>
             </div>
 
             <div class="form-group">
             <div class="input-group">
-                <label for="Condition" class="col-sm-3 col-form-label"> Condition</label>
-                <input class="form-control" name="Condition" placeholder="Enter your asset condition" type="tetx">
+                <label for="subject" class="col-sm-3 col-form-label">Expertise Subject </label>
+                <input class="form-control" name="Location" placeholder="Enter what subject did you taught?" type="text">
             </div>
             </div>
 
@@ -52,8 +52,8 @@
             
             <div class="form-group">
             <div class="input-group">
-                <label for="image" class="col-sm-3 col-form-label">Image asset</label>
-                <input class="form-control" type="file" class="form-control-file" name="Image">
+                <label for="certificate" class="col-sm-3 col-form-label">Degree Certificate</label>
+                <input class="form-control" type="file" class="form-control-file" name="certificate">
             </div>
             </div>
 
