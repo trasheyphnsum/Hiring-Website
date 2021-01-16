@@ -1,6 +1,6 @@
 @extends('layout')
 @section('content')
-<div class="row justify-content-center" id="text">
+<div class="row justify-content-center">
     <aside class="col-sm-6">
         <div class="card">
         <article class="card-body">
@@ -11,7 +11,7 @@
             {{ @csrf_field() }}
             <div class="form-group">
             <div class="input-group">
-                <label for="staticEmail" class="col-sm-3 col-form-label">Email</label>
+                <label for="staticEmail" class="col-sm-4 col-form-label">Email</label>
                 <div class="input-group-prepend">
                     <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                 </div>
@@ -20,7 +20,7 @@
             </div> 
             <div class="form-group">
                 <div class="input-group">
-                <label for="inputPassword" class="col-sm-3 col-form-label">Password</label>
+                <label for="inputPassword" class="col-sm-4 col-form-label">Password</label>
                 <div class="input-group-prepend">
                     <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
                 </div>

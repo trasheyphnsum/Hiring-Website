@@ -10,13 +10,13 @@
         @endif
 
             
-        </div>
+    </div>
     </div>
     <div class="row mt-4">
     @foreach ($record as $re)
         <div class="col-md-4" style="margin-bottom:10px">
-            <div class="card">
-                <div class="card-body">
+            <div class="card bg-light">
+                <div class="card-body ">
                     <img alt=""  class ="card-img-top"src="{{ URL::to('/') }}/images/{{$re['Image']}}" width="300px" height="200px">
                     @if(Session::get('message')=='equipment')
                     <h4 class="card-title text-center mb-4 mt-1">{{$re->Equipment_Type}}</h4>
@@ -24,11 +24,11 @@
                     <h4 class="card-title text-center mb-4 mt-1">{{$re->Vehicle_Type}}</h4>
                     @endif
                     <hr>
-                    <p class ="card-text">Email:{{$re->email}}</p>
-                    <p class ="card-text">Phone Number:{{$re->Phone_Number}}</p>
-                    <p class ="card-text">Renting Price:{{$re->Price}}</p>
-                    <p class ="card-text">Condition:{{$re->Condition}}</p>
-                    <p class ="card-text">Location:{{$re->Location}}</p>
+                    <p class ="card-text"><strong>Email:</strong>{{$re->email}}</p>
+                    <p class ="card-text"><strong>Phone Number:</strong>{{$re->Phone_Number}}</p>
+                    <p class ="card-text"><strong>Renting Price:</strong>{{$re->Price}}</p>
+                    <p class ="card-text"><strong>Condition:</strong>{{$re->Condition}}</p>
+                    <p class ="card-text"><strong>Location:</strong>{{$re->Location}}</p>
                 </div>
                 <div class="text-right">
                 <button type="submit" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#popUpWindow">Book</button>  
@@ -41,7 +41,7 @@
 </div>
 
 <!-- popup Reservation form -->
-<div class="container" id="text">
+<div class="container">
     <div class="modal fade" id="popUpWindow">
         <div class="modal-dialog">
         <div class="modal-content">

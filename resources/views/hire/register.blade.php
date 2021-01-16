@@ -6,7 +6,7 @@
     <button type="button" class="close" data-dismiss="alert">&times;</button>
 </div>
 @endif
-<div class="col d-flex justify-content-center" id="text">
+<div class="col d-flex justify-content-center">
     <aside class="col-sm-6">
         <div class="card">
         <article class="card-body">
@@ -17,7 +17,7 @@
             {{ @csrf_field() }}
             <div class="form-group">
             <div class="input-group">
-                <label for="Name" class="col-sm-3 col-form-label">Name</label>
+                <label for="Name" class="col-sm-4 col-form-label">Name</label>
                 <div class="input-group-prepend">
                     <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                 </div>
@@ -27,7 +27,7 @@
 
             <div class="form-group">
             <div class="input-group">
-                <label for="staticEmail" class="col-sm-3 col-form-label">Email</label>
+                <label for="staticEmail" class="col-sm-4 col-form-label">Email</label>
                 <div class="input-group-prepend">
                     <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
                 </div>
@@ -37,7 +37,7 @@
 
             <div class="form-group">
             <div class="input-group">
-                <label for="PhoneNumber" class="col-sm-3 col-form-label">Phone No.</label>
+                <label for="PhoneNumber" class="col-sm-4 col-form-label">Phone No.</label>
                 <div class="input-group-prepend">
                     <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
                 </div>
@@ -47,7 +47,7 @@
 
             <div class="form-group">
             <div class="input-group">
-                <label for="UserName" class="col-sm-3 col-form-label">User name</label>
+                <label for="UserName" class="col-sm-4 col-form-label">User name</label>
                 <div class="input-group-prepend">
                     <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                 </div>
@@ -57,7 +57,7 @@
             </div>
             <div class="form-group">
                 <div class="input-group">
-                <label for="inputPassword" class="col-sm-3 col-form-label">Password</label>
+                <label for="inputPassword" class="col-sm-4 col-form-label">Password</label>
                 <div class="input-group-prepend">
                     <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
                 </div>
@@ -67,7 +67,7 @@
 
             <div class="form-group">
                 <div class="input-group">
-                <label for="inputPassword" class="col-sm-3 col-form-label"> Confirm</label>
+                <label for="inputPassword" class="col-sm-4 col-form-label"> Confirm</label>
                 <div class="input-group-prepend">
                     <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
                 </div>

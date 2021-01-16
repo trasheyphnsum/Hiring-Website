@@ -6,8 +6,8 @@
     <button type="button" class="close" data-dismiss="alert">&times;</button>
 </div>
 @endif
-<div class="col d-flex justify-content-center" id="text">
-    <aside class="col-sm-6">
+<div class="col d-flex justify-content-center" >
+    <aside class="col-sm-8">
         <div class="card">
         <article class="card-body">
             <h4 class="card-title text-center mb-4 mt-1">You can post document(Driver) here</h4>

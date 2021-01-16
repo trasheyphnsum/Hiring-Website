@@ -1,6 +1,6 @@
 @extends('layout')
 @section('content')
-<div class="col d-flex justify-content-center" id="text">
+<div class="col d-flex justify-content-center">
     <aside class="col-sm-6">
         <div class="card">
         <article class="card-body">
@@ -12,7 +12,7 @@
             @csrf
             <div class="form-group">
             <div class="input-group">
-                <label for="staticEmail" class="col-sm-3 col-form-label">Name</label>
+                <label for="staticEmail" class="col-sm-4 col-form-label">Name</label>
                 <div class="input-group-prepend">
                     <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                 </div>
@@ -22,7 +22,7 @@
 
             <div class="form-group">
             <div class="input-group">
-                <label for="staticEmail" class="col-sm-3 col-form-label">Email</label>
+                <label for="staticEmail" class="col-sm-4 col-form-label">Email</label>
                 <div class="input-group-prepend">
                     <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
                 </div>
@@ -32,7 +32,7 @@
 
             <div class="form-group">
             <div class="input-group">
-                <label for="staticEmail" class="col-sm-3 col-form-label">Phone No.</label>
+                <label for="staticEmail" class="col-sm-4 col-form-label">Phone No.</label>
                 <div class="input-group-prepend">
                     <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
                 </div>
@@ -41,7 +41,7 @@
             </div> 
             <div class="form-group">
             <div class="input-group">
-                <label for="staticEmail" class="col-sm-3 col-form-label">Message</label>
+                <label for="staticEmail" class="col-sm-4 col-form-label">Message</label>
                 <textarea name="message" class="col-sm-9" row="7"></textarea><br/>
             </div> 
             </div> 
