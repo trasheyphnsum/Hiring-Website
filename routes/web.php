@@ -38,12 +38,12 @@ Route::get('/list_machine', 'Restroscontroller@list1')->name('list_machine');
 
 
 //register
-Route::view('/register', 'hire/register');
-Route::post('/register', 'Restroscontroller@register');
+// Route::view('/register', 'hire/register');
+// Route::post('/register', 'Restroscontroller@register');
 
-//Login
-Route::view('/login', 'hire/login');
-Route::post('/login', 'Restroscontroller@login');
+// //Login
+// Route::view('/login', 'hire/login');
+// Route::post('/login', 'Restroscontroller@login');
 
 //Tourist Guide
 Route::view('/guide', 'hire/touristguide');
@@ -167,3 +167,7 @@ Route::get('/', function () {
 
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

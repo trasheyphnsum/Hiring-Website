@@ -1,5 +1,16 @@
 @extends('layout')
 @section('content')
+<div class="wrap">
+   <div class="search">
+      <input type="text" class="searchTerm" placeholder="What are you looking for?">
+      <button type="submit" class="searchButton">
+        <i class="fa fa-search"></i>
+     </button>
+   </div>
+</div>
+
+<!-- 
+display Part -->
 <div class="container py-5">
     <div class="row">
         <div class="col-md-12">
@@ -29,6 +40,7 @@
                     <p class ="card-text"><strong>Renting Price:</strong>{{$re->Price}}</p>
                     <p class ="card-text"><strong>Condition:</strong>{{$re->Condition}}</p>
                     <p class ="card-text"><strong>Location:</strong>{{$re->Location}}</p>
+                    <p class="card-text float-left"><small class="text-muted">Last updated 3 mins ago</small></p>
                 </div>
                 <div class="text-right">
                 <button type="submit" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#popUpWindow">Book</button>  
