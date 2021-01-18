@@ -14,8 +14,6 @@
                     <div class="card-body">
                         <form method="post" action="{{route('add_equipment')}}" enctype="multipart/form-data">
                         {{ @csrf_field() }}
-
-                        
                         <div class="form-group row">
                             <label for="type" class="col-sm-3 col-form-label text-md-right">{{__('Type of Driver')}}</label>
                             <div class="col-md-6">
