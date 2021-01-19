@@ -40,7 +40,7 @@ display Part -->
                     <p class ="card-text"><strong>Renting Price:</strong>{{$re->Price}}</p>
                     <p class ="card-text"><strong>Condition:</strong>{{$re->Condition}}</p>
                     <p class ="card-text"><strong>Location:</strong>{{$re->Location}}</p>
-                    <p class="card-text float-left"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <p class="card-text float-left"><small class="text-muted">Last updated at{{$re->updated_at}}</small></p>
                 </div>
                 <div class="text-right">
                 <button type="submit" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#popUpWindow">Book</button>  
