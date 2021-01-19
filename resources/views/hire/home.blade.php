@@ -1,12 +1,20 @@
 @extends('layout')
 @section('content')
-<!-- For demo purpose -->
+@if(Session::get('status'))
+<div class="alert alert-success alert-dismissible fade show">
+    {{Session::get('status')}}
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+</div>
+@endif
+
+
 <div class="wrap">
    <div class="search">
       <input type="text" class="searchTerm" placeholder="What are you looking for?">
       <button type="submit" class="searchButton">
         <i class="fa fa-search"></i>
      </button>
+     <input type='hidden' id='auth' value={{Auth::check()}}>
    </div>
 </div>
 <div class="container py-5">
@@ -34,7 +42,8 @@
                     <p class="card-text float-left"><small class="text-muted">Last updated at {{$re->updated_at}}</small></p>
                 </div>
                 <div class="text-right">
-                <button type="submit" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#popUpWindow">Book</button>  
+               
+                <button type="submit" class="btn btn-primary btn-lg float-right btn1" data-toggle="modal" data-target="#popUpWindow" id= 'button1' disabled>Book</button>  
                 </div>                  
             </div>
         </div>
@@ -67,9 +76,10 @@
                     
                     <p class="card-text float-left"><small class="text-muted">Last updated at {{$re->updated_at}}</small></p>
                 </div>
+        
                 <div class="text-right">
-                <button type="submit" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#popUpWindow">Book</button>  
-                </div>                  
+                    <button type="submit" class="btn btn-primary btn-lg float-right btn1" data-toggle="modal" data-target="#popUpWindow" id='button' disabled>Book</button>  
+                </div>                   
             </div>
         </div>
     @endforeach
@@ -90,7 +100,7 @@
           <!-- body -->
           <div class="modal-header">
             <form role="form" method="post" action="">
-
+              @csrf
             <div class="form-group">
               <div class="input-group">
                   <label for="Name" class="col-sm-4 col-form-label">Name</label>
@@ -202,5 +212,4 @@
       </div>
     </div>
 </div>
-
 @endsection

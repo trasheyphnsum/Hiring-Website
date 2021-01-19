@@ -28,10 +28,6 @@ Route::get('/', 'Restroscontroller@list')->name('list_home');
 // Route::view('/register', 'hire/register');
 // Route::post('/register', 'Restroscontroller@register');
 
-// //Login
-// Route::view('/login', 'hire/login');
-// Route::post('/login', 'Restroscontroller@login');
-
 //Tourist Guide
 Route::view('/guide', 'hire/touristguide');
 
@@ -59,12 +55,10 @@ Route::get('/contact', 'Restroscontroller@contact');
 //Equipment
 Route::view('/add', 'hire/add');
 Route::post('/add_equipment', 'Restroscontroller@add')->name('add_equipment');
-Route::get('/list_equipment', 'Restroscontroller@list')->name('list_equipment');
 
 
 //Vehicle or machine
 Route::view('/add1', 'hire/add1');
 Route::post('/add_machine', 'Restroscontroller@add1')->name('add_machine');
-Route::get('/list_machine', 'Restroscontroller@list1')->name('list_machine');
 
 });

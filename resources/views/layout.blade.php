@@ -20,6 +20,8 @@
     <!-- custom javascript>-->
     <script src="{{asset('js/custom.js')}}"></script>
 
+    <!-- Disable button before login -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </header>
 <body>
 
@@ -70,7 +72,6 @@
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
-
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>

@@ -1,8 +1,8 @@
 @extends('layout')
 @section('content')
-@if(Session::get('status'))
+@if(Session::get('message'))
 <div class="alert alert-success alert-dismissible fade show">
-    {{Session::get('status')}}
+    {{Session::get('message')}}
     <button type="button" class="close" data-dismiss="alert">&times;</button>
 </div>
 @endif
