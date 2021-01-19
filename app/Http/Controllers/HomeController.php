@@ -25,6 +25,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+        Session::flash('message','');
         return view('home');
     }
 }

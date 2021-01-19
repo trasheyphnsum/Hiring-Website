@@ -35,8 +35,6 @@ class Restroscontroller extends Controller
         $request->Image->move(public_path('images'), $imageName);
 
         $equip = new Equipment;
-        $equip->email= $request->input('Email1');
-        $equip->Phone_Number=$request->input('Phone_Number');
         $equip->Equipment_Type=$request->input('Equipment_Type');
         $equip->Price=$request->input('Price');
         $equip->Condition=$request->input('Condition');
@@ -58,8 +56,6 @@ class Restroscontroller extends Controller
         $request->Image->move(p65ublic_path('images'), $imageName);
 
         $equip = new Vehicle;
-        $equip->email= $request->input('Email');
-        $equip->Phone_Number=$request->input('Phone_Number');
         $equip->Vehicle_Type=$request->input('Type');
         $equip->Price=$request->input('Price');
         $equip->Condition=$request->input('Condition');

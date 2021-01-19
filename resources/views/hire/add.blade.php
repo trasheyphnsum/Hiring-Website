@@ -15,20 +15,6 @@
                         <form method="post" action="{{route('add_equipment')}}" enctype="multipart/form-data">
                         {{ @csrf_field() }}
                         <div class="form-group row">
-                            <label for="staticEmail" class="col-sm-3 col-form-label text-md-right">{{__('Email')}}</label>
-                            <div class="col-md-6">
-                                <input type="email" class="form-control" name ="Email1" placeholder="Enter Email">
-                            </div> 
-                        </div> 
-
-                        <div class="form-group row">
-                            <label for="PhoneNumber" class="col-sm-3 col-form-label text-md-right">{{__('Phone Number')}}</label>
-                            <div class="col-md-6">
-                                <input type="Phone" class="form-control" name ="Phone_Number" placeholder="Enter your Phone number">
-                            </div> 
-                        </div> 
-
-                        <div class="form-group row">
                             <label for="EquipmentType" class="col-sm-3 col-form-label text-md-right">{{__('Equipment Type')}}</label>
                             <div class="col-md-6">
                                 <input type="text" class="form-control" name ="Equipment_Type" placeholder="Enter equipment type">

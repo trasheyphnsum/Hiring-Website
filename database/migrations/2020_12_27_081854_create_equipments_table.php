@@ -15,8 +15,6 @@ class CreateEquipmentsTable extends Migration
     {
         Schema::create('equipments', function (Blueprint $table) {
             $table->id();
-            $table->string('email')->unique();
-            $table->integer('Phone_Number');
             $table->string('Equipment_Type');
             $table->double('Price');
             $table->string('Condition');
