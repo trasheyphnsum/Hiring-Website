@@ -19,7 +19,6 @@ display Part -->
         @else 
             <h2 class="text-center"> Machine/Vehicle Available<h2>
         @endif
-
             
     </div>
     </div>
@@ -28,18 +27,24 @@ display Part -->
         <div class="col-md-4" style="margin-bottom:10px">
             <div class="card bg-light">
                 <div class="card-body ">
-                    <img alt=""  class ="card-img-top"src="{{ URL::to('/') }}/images/{{$re['Image']}}" width="300px" height="200px">
+                    <img alt=""  class ="card-img-top"src="{{ URL::to('/') }}/images/{{$re['Image']}}" width="100px" height="150px">
                     @if(Session::get('message')=='equipment')
-                    <h4 class="card-title text-center mb-4 mt-1">{{$re->Equipment_Type}}</h4>
+                    <h5 class="card-title mb-4 mt-1">Equipment Details:</h5>
+                    <p class="card-title mb-4 mt-1"><strong>Equipment Type: </strong>{{$re->Equipment_Type}}</p>
                     @else
-                    <h4 class="card-title text-center mb-4 mt-1">{{$re->Vehicle_Type}}</h4>
+                    <h5 class="card-title text-center mb-4 mt-1">Vehicle/Machine Details</h5>
+                    <p class="card-title text-center mb-4 mt-1"><strong>Type: </strong>{{$re->Vehicle_Type}}</p>
                     @endif
-                    <hr>
-                    <p class ="card-text"><strong>Email:</strong>{{$re->email}}</p>
-                    <p class ="card-text"><strong>Phone Number:</strong>{{$re->Phone_Number}}</p>
-                    <p class ="card-text"><strong>Renting Price:</strong>{{$re->Price}}</p>
-                    <p class ="card-text"><strong>Condition:</strong>{{$re->Condition}}</p>
-                    <p class ="card-text"><strong>Location:</strong>{{$re->Location}}</p>
+                    <p class ="card-text"><strong>Renting Price: </strong>{{$re->Price}}</p>
+                    <p class ="card-text"><strong>Condition: </strong>{{$re->Condition}}</p>
+                    <p class ="card-text"><strong>Location: </strong>{{$re->Location}}</p>
+                    <hr> 
+                    <h5 class="card-title mb-4 mt-1">Posted By:</h5>
+                    <p class ="card-text"><strong>Name: </strong>{{$re->getUserRelation->name}}</p>
+                    <p class ="card-text"><strong>Email: </strong>{{$re->getUserRelation->email}}</p>
+                    <p class ="card-text"><strong>Phone Number: </strong>{{$re->getUserRelation->phone}}</p>
+
+                    
                     <p class="card-text float-left"><small class="text-muted">Last updated at {{$re->updated_at}}</small></p>
                 </div>
                 <div class="text-right">
@@ -49,7 +54,6 @@ display Part -->
         </div>
     @endforeach
     </div>
-    {{$record->links()}}
 </div>
 
 <!-- popup Reservation form -->
@@ -173,7 +177,6 @@ display Part -->
             </div>
         </div>
         </div>
-    </div>
 </div>
 
 @endsection

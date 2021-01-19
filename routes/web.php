@@ -18,7 +18,8 @@ use Illuminate\Support\Facades\Route;
 // });
 
 //Home page
-Route::view('/', 'hire/home');
+//Route::view('/', 'hire/home');
+Route::get('/', 'Restroscontroller@list')->name('list_home');
 
 
 

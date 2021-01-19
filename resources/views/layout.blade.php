@@ -34,7 +34,7 @@
                     <li class="nav-item active"><a href="/" class="nav-link ">Home <span class="sr-only">(current)</span></a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-                         aria-expanded="false">Post Category</a>
+                         aria-expanded="false">Post</a>
                         <div class="dropdown-menu">
                         <a class="dropdown-item" href="/add">Equipment</a>
                         <a class="dropdown-item" href="/add1">Machine or Vehicle</a>
@@ -49,16 +49,6 @@
                         </div>
                     </li>
                     <li class="nav-item"><a href="/contact" class="nav-link ">Contact us</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link "> service</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link  dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" 
-                        aria-expanded="false"> Reservation category</a>
-                        <div class="dropdown-menu">
-                        <a class="dropdown-item" href="{{route('list_equipment')}}">Equipment</a>
-                        <a class="dropdown-item" href="{{route('list_machine')}}">Machine or Vehicle</a>
-                        <a class="dropdown-item" href="#">Human Resource</a>
-                        </div>
-                    </li>
                     @guest
                             <li class="nav-item">
                                 <a class="nav-link" href="/login">{{ __('Login') }}</a>

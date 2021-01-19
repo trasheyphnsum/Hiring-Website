@@ -9,89 +9,198 @@
      </button>
    </div>
 </div>
-
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100" src="{{ URL::to('/') }}" alt="First slide">
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-12">
+          <h2 class="text-center"> Equipment Available<h2>    
+      </div>
     </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="{{ URL::to('/') }}" alt="Second slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="{{ URL::to('/') }}" alt="Third slide">
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-
-<div class="container">
-    <div class="pt-5 text-white">
-        <header class="py-5 mt-5">
-            <h1 class="display-4">Transparent Navbar</h1>
-            <p class="lead mb-0">Using Bootstrap 4 and Javascript, create a transparent navbar which changes its style on scroll.</p>
-            <p class="lead mb-0">Snippet by
-                <a href="https://bootstrapious.com" class="text-white">
-                    <u>Bootstrapious</u></a>
-            </p>
-        </header>
-        <div class="py-5">
-            <p class="lead">Lorem ipsum dolor sit amet, <strong class="font-weight-bold">consectetur adipisicing </strong>elit. Explicabo consectetur odio voluptatum facere animi temporibus, distinctio tempore enim corporis quam <strong class="font-weight-bold">recusandae </strong>placeat! Voluptatum voluptate, ex modi illum quas nam distinctio.</p>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <div class="row mt-4">
+    @foreach ($record as $re)
+        <div class="col-md-4" style="margin-bottom:10px">
+            <div class="card bg-light">
+                <div class="card-body ">
+                    <img alt=""  class ="card-img-top"src="{{ URL::to('/') }}/images/{{$re['Image']}}" width="100px" height="150px">
+                    <h5 class="card-title mb-4 mt-1">Equipment Details:</h5>
+                    <p class="card-title mb-4 mt-1"><strong>Equipment Type: </strong>{{$re->Equipment_Type}}</p>
+                    <p class ="card-text"><strong>Renting Price: </strong>{{$re->Price}}</p>
+                    <p class ="card-text"><strong>Condition: </strong>{{$re->Condition}}</p>
+                    <p class ="card-text"><strong>Location: </strong>{{$re->Location}}</p>
+                    <hr> 
+                    <h5 class="card-title mb-4 mt-1">Posted By:</h5>
+                    <p class ="card-text"><strong>Name: </strong>{{$re->getUserRelation->name}}</p>
+                    <p class ="card-text"><strong>Email: </strong>{{$re->getUserRelation->email}}</p>
+                    <p class ="card-text"><strong>Phone Number: </strong>{{$re->getUserRelation->phone}}</p>
+                    <p class="card-text float-left"><small class="text-muted">Last updated at {{$re->updated_at}}</small></p>
+                </div>
+                <div class="text-right">
+                <button type="submit" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#popUpWindow">Book</button>  
+                </div>                  
+            </div>
         </div>
-        <div class="py-5">
-            <p class="lead">Lorem ipsum dolor sit amet, <strong class="font-weight-bold">consectetur adipisicing </strong>elit. Explicabo consectetur odio voluptatum facere animi temporibus, distinctio tempore enim corporis quam <strong class="font-weight-bold">recusandae </strong>placeat! Voluptatum voluptate, ex modi illum quas nam distinctio.</p>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
+    @endforeach
     </div>
-</div>
-<div class="container">
-  <div class="card-group">
-    <div class="card">
-      <img class="card-img-top" src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/bologna-2.jpg" alt="Bologna">
-      <div class="card-body">
-        <h4 class="card-title">Bologna</h4>
-        <h6 class="card-subtitle mb-2">Emilia-Romagna Region, Italy</h6>
-        <p class="card-text">It is the seventh most populous city in Italy, at the heart of a metropolitan area of about one million people. </p>
-        <a href="#" class="card-link text-danger">Read More</a>
-        <a href="#" class="card-link text-warning">Book a Trip</a>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </div>
-    </div>
-    <div class="card">
-      <img class="card-img-top" src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/oslo.jpg" alt="Oslo">
-      <div class="card-body">
-        <h4 class="card-title">Oslo</h4>
-        <h6 class="card-subtitle mb-2">Oslofjord, Norway</h6>
-        <p class="card-text">Oslo is the economic and governmental centre of Norway. The city is also a hub of Norwegian trade, banking and industry.</p>
-        <a href="#" class="card-link text-primary">See Deals</a>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated yesterday</small>
-      </div>
-    </div>
-    <div class="card">
-      <img class="card-img-top" src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/madrid.jpg" alt="Madrid">
-      <div class="card-body">
-        <h4 class="card-title">Madrid</h4>
-        <h6 class="card-subtitle mb-2">Spain</h6>
-        <p class="card-text">Madrid is home to two world-famous football clubs, Real Madrid and Atlético de Madrid. Due to its economic output, high standard of living, and market size, Madrid is considered the major financial centre of Southern Europe.</p>
-        <a href="#" class="card-link text-info">See Gallery</a>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Last updated 5 days ago</small>
-      </div>
-    </div>
-  </div>
+    {{$record->links()}}
 
+    <div class="row">
+        <div class="col-md-12">
+          <h2 class="text-center"> Vehicle/Machine Available<h2>    
+      </div>
+    </div>
+    <div class="row mt-4">
+    @foreach ($record1 as $re)
+        <div class="col-md-4" style="margin-bottom:10px">
+            <div class="card bg-light">
+                <div class="card-body ">
+                    <img alt=""  class ="card-img-top"src="{{ URL::to('/') }}/images/{{$re['Image']}}" width="100px" height="150px">
+                    <h5 class="card-title mb-4 mt-1">Vehicle/Machine Details</h5>
+                    <p class="card-title mb-4 mt-1"><strong>Type(Machine/Vehicle): </strong>{{$re->Vehicle_Type}}</p>
+                    <p class ="card-text"><strong>Renting Price: </strong>{{$re->Price}}</p>
+                    <p class ="card-text"><strong>Condition: </strong>{{$re->Condition}}</p>
+                    <p class ="card-text"><strong>Location: </strong>{{$re->Location}}</p>
+                    <hr> 
+                    <h5 class="card-title mb-4 mt-1">Posted By:</h5>
+                    <p class ="card-text"><strong>Name: </strong>{{$re->getUserVehicleRelation->name}}</p>
+                    <p class ="card-text"><strong>Email: </strong>{{$re->getUserVehicleRelation->email}}</p>
+                    <p class ="card-text"><strong>Phone Number: </strong>{{$re->getUserVehicleRelation->phone}}</p>
+
+                    
+                    <p class="card-text float-left"><small class="text-muted">Last updated at {{$re->updated_at}}</small></p>
+                </div>
+                <div class="text-right">
+                <button type="submit" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#popUpWindow">Book</button>  
+                </div>                  
+            </div>
+        </div>
+    @endforeach
+    </div>
+    {{$record1->links()}}
 </div>
+
+<!-- popup Reservation form -->
+<div class="container">
+    <div class="modal fade" id="popUpWindow">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- header -->
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h3 class="modal-title">Reservation Form</h3>
+          </div>
+          <!-- body -->
+          <div class="modal-header">
+            <form role="form" method="post" action="">
+
+            <div class="form-group">
+              <div class="input-group">
+                  <label for="Name" class="col-sm-4 col-form-label">Name</label>
+                  <div class="input-group-prepend">
+                      <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                  </div>
+                  <input type="text" class="form-control" name ="Name" placeholder="Enter name">
+              </div> 
+            </div> 
+
+            <div class="form-group">
+              <div class="input-group">
+                  <label for="staticEmail" class="col-sm-4 col-form-label">Email</label>
+                  <div class="input-group-prepend">
+                      <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+                  </div>
+                  <input type="email" class="form-control" name ="Email" placeholder="Enter Email">
+              </div> 
+            </div> 
+
+            <div class="form-group">
+              <div class="input-group">
+                  <label for="PhoneNumber" class="col-sm-4 col-form-label">Phone No.</label>
+                  <div class="input-group-prepend">
+                      <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+                  </div>
+                  <input type="Phone" class="form-control" name ="Phone_Number" placeholder="Enter your Phone number">
+              </div> 
+            </div>
+              
+            <div class="form-group">
+              <div class="input-group">
+                  <label for="PickupLocation" class="col-sm-4 col-form-label">Pick up Location </label>
+                  <div class="input-group-prepend">
+                      <span class="input-group-text"> <i class="fa fa-map-marker"></i> </span>
+                  </div>
+                  <input type="text" class="form-control" name ="pickup" placeholder="Enter pickup location">
+              </div> 
+            </div> 
+
+            <div class="form-group">
+              <div class="input-group">
+                  <label for="dropLocation" class="col-sm-4 col-form-label">Drop Location</label>
+                  <div class="input-group-prepend">
+                      <span class="input-group-text"> <i class="fa fa-map-marker"></i> </span>
+                  </div>
+                  <input type="text" class="form-control" name ="drop" placeholder="Enter drop location">
+              </div> 
+            </div> 
+
+            <div class="form-group">
+              <div class="input-group">
+                  <label for="pickdate" class="col-sm-4 col-form-label">Pick up Date</label>
+                  <div class="input-group-prepend">
+                      <span class="input-group-text"> <i class="fa fa-calendar"></i> </span>
+                  </div>
+                  <input type="date" name="pickDate" id="Date" >
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-group">
+                  <label for="pickdate" class="col-sm-4 col-form-label">Drop Date</label>
+                  <div class="input-group-prepend">
+                      <span class="input-group-text"> <i class="fa fa-calendar"></i> </span>
+                  </div>
+                  <input type="date" name="dropDate" id="date">
+              </div>
+            </div>
+              
+            <div class="form-group">
+              <div class="input-group">
+                  <label for="pickdate" class="col-sm-4 col-form-label">pick up Time</label>
+                  <div class="input-group-prepend">
+                      <span class="input-group-text"> <i class="fa fa-clock"></i> </span>
+                  </div>
+                  <input type="time" name="PickTime" id="time">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-group">
+                  <label for="pickdate" class="col-sm-4 col-form-label">Drop Time</label>
+                  <div class="input-group-prepend">
+                      <span class="input-group-text"> <i class="fa fa-clock"></i> </span>
+                  </div>
+                  <input type="time" name="dropTime" id="time">
+              </div>
+            </div>
+
+            <div class="col-auto">
+              <div class="form-check mb-2">
+                  <input class="form-check-input" type="checkbox" id="autoSizingCheck">
+                  <label class="form-check-label" for="autoSizingCheck">
+                  By, checking the box, you agreed to the terms and condition between you and the owner. 
+                  </label>
+              </div>
+            </div>
+              
+            </form>
+            </div>
+              <!-- footer -->
+            <div class="modal-footer">
+              <button class="btn btn-primary btn-lg float-right">Submit</button>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
 @endsection

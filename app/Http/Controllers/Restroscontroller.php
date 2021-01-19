@@ -6,6 +6,7 @@ use App\Vehicle;
 use App\Register;
 use Illuminate\Http\Request;
 use Session;
+use Auth;
 //use Illuminate\Support\Facades\DB;
 class Restroscontroller extends Controller
 {
@@ -40,9 +41,10 @@ class Restroscontroller extends Controller
         $equip->Condition=$request->input('Condition');
         $equip->Location=$request->input('Location'); 
         $equip->Image=$imageName; 
+        $equip->user_id=Auth::user()->id;
         $request->session()->flash('status','Your Post added Successfully');
         $equip->save();
-        return redirect()->route('list_equipment');
+        return redirect()->route('list_home');
     }
 
     //vehivle machinaries
@@ -53,7 +55,7 @@ class Restroscontroller extends Controller
         //     'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         // ]);
         $imageName = time().'.'.$request->Image->extension(); 
-        $request->Image->move(p65ublic_path('images'), $imageName);
+        $request->Image->move(public_path('images'), $imageName);
 
         $equip = new Vehicle;
         $equip->Vehicle_Type=$request->input('Type');
@@ -61,17 +63,21 @@ class Restroscontroller extends Controller
         $equip->Condition=$request->input('Condition');
         $equip->Location=$request->input('Location'); 
         $equip->Image=$imageName;
+        $equip->user_id=Auth::user()->id;
         $request->session()->flash('status','Your Post added Successfully');
         $equip->save();
-        return redirect()->route('list_machine');
+        return redirect()->route('list_home');
     }
 
     //equipment view
     public function list()
     {
-        $record = Equipment::paginate(3);
+        //$record = Equipment::paginate(3);
+        $record=Equipment::with('getUserRelation')->paginate(3);
+        $record1=Vehicle::with('getUserVehicleRelation')->paginate(3);
+        //dd($record);
         Session::flash('message','equipment');
-        return view('hire/reservation',["record"=>$record]);
+        return view('hire/home',["record"=>$record],["record1"=>$record1]);
      }
 
     //vehicle view

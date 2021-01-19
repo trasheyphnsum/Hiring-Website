@@ -19,7 +19,8 @@ class CreateVehiclesTable extends Migration
             $table->double('Price');
             $table->string('Condition');
             $table->string('Location');
-            $table->binary('Image');
+            $table->string('Image');
+            $table->integer('user_id');
             $table->timestamps();
         });
     }
