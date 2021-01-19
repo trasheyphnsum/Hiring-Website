@@ -12,7 +12,7 @@
             <div class="card">
                 <div class="card-header">{{ __('You can post your details') }}</div>
                     <div class="card-body">
-                        <form method="post" action="{{route('')}}" enctype="multipart/form-data">
+                        <form method="post" action="" enctype="multipart/form-data">
                         {{ @csrf_field() }}
                         <div class="form-group row">
                             <label for="experience" class="col-sm-3 col-form-label text-md-right">{{__('Experience')}}</label>
