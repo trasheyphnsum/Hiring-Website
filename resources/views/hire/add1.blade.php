@@ -12,12 +12,12 @@
             <div class="card">
                 <div class="card-header">{{ __('You can post Your Vehicle or Machine details') }}</div>
                     <div class="card-body">
-                        <form method="post" action="{{route('add_equipment')}}" enctype="multipart/form-data">
+                        <form method="POST" action="{{route('add_machine')}}" enctype="multipart/form-data">
                         {{ @csrf_field() }}
                         <div class="form-group row">
                             <label for="staticEmail" class="col-sm-3 col-form-label text-md-right">{{__('Email')}}</label>
                             <div class="col-md-6">
-                                <input type="email" class="form-control" name ="Email1" placeholder="Enter Email">
+                                <input type="email" class="form-control" name ="Email" placeholder="Enter Email">
                             </div> 
                         </div> 
 

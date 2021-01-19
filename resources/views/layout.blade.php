@@ -3,37 +3,22 @@
     <title>Hiring Web Application</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" 
-    crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" 
-    crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-     crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Image icon -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
     
     <!-- custom css -->
     <link rel="stylesheet" href="{{ URL::asset('css/custom.css') }}">
-    
+
+    <!-- Footer -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <!-- custom javascript>-->
     <script src="{{asset('js/custom.js')}}"></script>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
 
 </header>
 <body>
@@ -46,13 +31,14 @@
             
             <div id="navbarSupportedContent" class="collapse navbar-collapse">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active"><a href="/" class="nav-link">Home <span class="sr-only">(current)</span></a></li>
+                    <li class="nav-item active"><a href="/" class="nav-link ">Home <span class="sr-only">(current)</span></a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
                          aria-expanded="false">Post Category</a>
                         <div class="dropdown-menu">
                         <a class="dropdown-item" href="/add">Equipment</a>
                         <a class="dropdown-item" href="/add1">Machine or Vehicle</a>
+                        <div class="dropdown-divider"></div>
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" 
                         aria-expanded="false" id="text">Human Resources</a>
                         <div class="dropdown-menu">
@@ -62,10 +48,10 @@
                         <a class="dropdown-item" href="/tech">Technician</a>
                         </div>
                     </li>
-                    <li class="nav-item"><a href="/contact" class="nav-link">Contact us</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link"> service</a></li>
+                    <li class="nav-item"><a href="/contact" class="nav-link ">Contact us</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link "> service</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" 
+                        <a class="nav-link  dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" 
                         aria-expanded="false"> Reservation category</a>
                         <div class="dropdown-menu">
                         <a class="dropdown-item" href="{{route('list_equipment')}}">Equipment</a>
@@ -73,8 +59,6 @@
                         <a class="dropdown-item" href="#">Human Resource</a>
                         </div>
                     </li>
-                    <!-- <li class="nav-item"><a href="/login" class="nav-link text-uppercase font-weight-bold"></i>login</a></li>
-                    <li class="nav-item"><a href="/register" class="nav-link text-uppercase font-weight-bold">Register</a></li> -->
                     @guest
                             <li class="nav-item">
                                 <a class="nav-link" href="/login">{{ __('Login') }}</a>
@@ -114,7 +98,7 @@
       <header class="py-5 mt-5">
       </header>  
     </div> 
-    <div id="content" class="py-4">
+    <div id="content">
       @yield('content')
     </div> 
 </div>

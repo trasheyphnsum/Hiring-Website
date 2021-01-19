@@ -29,7 +29,7 @@
                         </div> 
                         <div class="form-group">
                         <label for="Drivertype" class="col-sm-3 col-form-label text-md-right">License Type</label>
-                            <select class="dropdown-form" id="select-width">
+                            <select class="dropdown-form" id="select-width"  >
                                     <option>Two-wheeler</option>
                                     <option>Light vehicle</option>
                                     <option>Medium vehicle</option>

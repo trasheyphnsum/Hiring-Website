@@ -8,7 +8,7 @@
                 <p class="text-primary text-center"> <strong>Got question? We would love to solve your problem. Send us a message and 
                      we will repond as soon as possible</strong></p>
                     <div class="card-body">
-                        <form method="post" action="{{route('add_equipment')}}" enctype="multipart/form-data">
+                        <form method="post" action="/contact" enctype="multipart/form-data">
                         {{ @csrf_field() }}
                         <div class="form-group row">
                             <label for="staticEmail" class="col-sm-3 col-form-label text-md-right">{{__('Email')}}</label>

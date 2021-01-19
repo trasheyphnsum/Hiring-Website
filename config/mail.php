@@ -2,6 +2,34 @@
 
 return [
 
+    'driver' => env('MAIL_DRIVER', 'smtp'),
+
+    'host' => env('MAIL_HOST', 'smtp.gmail.com'),
+
+    'port' => env('MAIL_PORT', 587),
+
+    'from' => [
+        'address' => env('MAIL_FROM_ADDRESS', 'trasheyphuentsho04@gmail.com'),
+        'name' => env('MAIL_FROM_NAME', 'Hiring Web Application'),
+    ],
+
+    'encryption' => env('MAIL_ENCRYPTION', 'tls'),
+
+    'username' => env('MAIL_USERNAME'),
+
+    'password' => env('MAIL_PASSWORD'),
+
+    'sendmail' => '/usr/sbin/sendmail -bs',
+
+    'markdown' => [
+        'theme' => 'default',
+        'paths' => [
+            resource_path('views/vendor/mail'),
+        ],
+    ],
+];
+/*return [
+
     /*
     |--------------------------------------------------------------------------
     | Default Mailer
@@ -13,7 +41,7 @@ return [
     |
     */
 
-    'default' => env('MAIL_MAILER', 'smtp'),
+    /*'default' => env('MAIL_MAILER', 'smtp'),
 
     /*
     |--------------------------------------------------------------------------
@@ -33,7 +61,7 @@ return [
     |
     */
 
-    'mailers' => [
+  /*  'mailers' => [
         'smtp' => [
             'transport' => 'smtp',
             'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
@@ -73,7 +101,7 @@ return [
     |
     */
 
-    'from' => [
+ /*   'from' => [
         'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
         'name' => env('MAIL_FROM_NAME', 'Example'),
     ],
@@ -89,7 +117,7 @@ return [
     |
     */
 
-    'markdown' => [
+  /*  'markdown' => [
         'theme' => 'default',
 
         'paths' => [
@@ -97,4 +125,4 @@ return [
         ],
     ],
 
-];
+];*/

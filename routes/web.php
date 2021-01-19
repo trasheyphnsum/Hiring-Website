@@ -20,21 +20,7 @@ use Illuminate\Support\Facades\Route;
 //Home page
 Route::view('/', 'hire/home');
 
-//Hiring Website
-Route::get('/contact', 'Restroscontroller@index');
-Route::get('/contact', 'Restroscontroller@contact');
 
-
-//Equipments
-Route::view('/add', 'hire/add');
-Route::post('/add_equipment', 'Restroscontroller@add')->name('add_equipment');
-Route::get('/list_equipment', 'Restroscontroller@list')->name('list_equipment');
-
-
-//Vehicle or machine
-Route::view('/add1', 'hire/add1');
-Route::post('/add1', 'Restroscontroller@add1');
-Route::get('/list_machine', 'Restroscontroller@list1')->name('list_machine');
 
 
 //register
@@ -57,117 +43,27 @@ Route::view('/tutor', 'hire/tutor');
 //Technician
 Route::view('/tech', 'hire/technician');
 
-//Products
-//Route::resource('products','ProductController');
-
-//Route::get('/sample/{id}', function ($id) {
-//  echo $id;
-//  return view('sample');
-//  });
-
-//create link using anchor tag
-//Route::view('sample','user');
-
-//how to direct the page (Method 1)
-/*Route::get('sample', function () {
-  
-    return view('user');
-});
-//Route::redirect('/','user');
-
-
-Route::get('/', function () {
-   // return view('welcome');
-   return redirect('sample');
-});
-
-*/
-// for form and validation
-// Route::view('account', 'user');
-// Route::post('UserController', 'UserController@index');
-
-//for if_else, forweach and for loop
-//Route::get('users', 'UserController@index');
-
-// for common layout
-// Route::view('/home','commonLayout/home');
-// Route::view('/about','commonLayout/about');
-
-// for global Middleware 
-//Route::view('/noaccess', 'mWare/noaccess');
-
-//for  group middleware
-// Route::group(['middleware'=>['customAuth']], function(){
-
-//     Route::get('/', function () {
-//         return view('welcome');
-//     });
-//     Route::view('/tashi', 'tashi');
-// });
-
-// Route Middleware
-// Route::view('/tashi', 'mWare/tashi') -> middleware('customAuthRoute');
-
-//csrf_token
-// Route::view('/forms','form/csrf');
-// Route::post('/forms','users@index');
-
-//API Routes
-// Route::get('/api','profiles@index');
-
-//Login_Session has used csrf.php.blade
-// Route::view('/forms','form/csrf');
-// Route::post('/forms','users@index');
-//Route::view('login','session/login');
-
-
-// Route::get('login/', function () {
-//     if(!session()->has('data')){
-//          return  redirect('forms');
-//     }
-//          return view('session/login');
-//  });
-// Route::get('/logout', function () {
-//     session()->forget('data');
-
-//     return  redirect('forms');
-// });
-
-// Seeion through middleware
-// Route::group(['middleware'=>['SessionAuth']], function(){
-//     Route::view('login','session/login');
-
-//     Route::get('/', function () {
-//         return view('welcome');
-//     });
-// });
-//  Route::view('tasks','flashSession/task');
-//  Route::post('tasks','tasks@index');
-
-//Localization
-//Route::view('local','localization/local');
-
-//to get input from the user by typing en or hi page directly.
-// Route::get('/local/{lang}', function ( $lang) {
-//     App::setlocale($lang);
-//     return view('localization/local');
-// });
-
-// To upload a file
-// Route::post('/file','Uploadsfile@index');
-// Route::view('/file','uploadFile/file');
-
-//Database Connection
-//Route::get('/info','infos@index');
-//Route::view('info','listDatabseView/users');
-
-
-
-
-
-
-
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Auth::routes(['verify' => true]);
+
+
+Route::middleware(['auth'])->group(function () {
+   //Hiring Website
+Route::get('/contact', 'Restroscontroller@index');
+Route::get('/contact', 'Restroscontroller@contact');
+
+
+//Equipment
+Route::view('/add', 'hire/add');
+Route::post('/add_equipment', 'Restroscontroller@add')->name('add_equipment');
+Route::get('/list_equipment', 'Restroscontroller@list')->name('list_equipment');
+
+
+//Vehicle or machine
+Route::view('/add1', 'hire/add1');
+Route::post('/add_machine', 'Restroscontroller@add1')->name('add_machine');
+Route::get('/list_machine', 'Restroscontroller@list1')->name('list_machine');
+
+});

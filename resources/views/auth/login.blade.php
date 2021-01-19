@@ -61,6 +61,14 @@
                                 @endif
                             </div>
                         </div>
+                        <div class="form-group row">
+                            <div class="col-md-6 offset-md-4">
+                                <strong>Do you have any Account? If not,<a class="btn btn-link float-right" href="/register">
+                                    {{ __(' Register') }}
+                                </a></strong>
+                                
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>

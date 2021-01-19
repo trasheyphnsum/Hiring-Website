@@ -41,7 +41,6 @@ class Restroscontroller extends Controller
         $equip->Price=$request->input('Price');
         $equip->Condition=$request->input('Condition');
         $equip->Location=$request->input('Location'); 
-        
         $equip->Image=$imageName; 
         $request->session()->flash('status','Your Post added Successfully');
         $equip->save();
@@ -52,13 +51,16 @@ class Restroscontroller extends Controller
 
     public function add1(Request $request)
     {
+        // $request->validate([
+        //     'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        // ]);
         $imageName = time().'.'.$request->Image->extension(); 
-        $request->Image->move(public_path('images'), $imageName);
+        $request->Image->move(p65ublic_path('images'), $imageName);
 
         $equip = new Vehicle;
         $equip->email= $request->input('Email');
         $equip->Phone_Number=$request->input('Phone_Number');
-        $equip->Vehicle_Type=$request->input('Vehicle_Type');
+        $equip->Vehicle_Type=$request->input('Type');
         $equip->Price=$request->input('Price');
         $equip->Condition=$request->input('Condition');
         $equip->Location=$request->input('Location'); 
@@ -66,33 +68,6 @@ class Restroscontroller extends Controller
         $request->session()->flash('status','Your Post added Successfully');
         $equip->save();
         return redirect()->route('list_machine');
-    }
-
-    //Register
-
-    public function register(Request $request)
-    {
-        $user = new Register;
-        $user->Name= $request->input('Name');
-        $user->Email= $request->input('Email');
-        $user->Phone_Number=$request->input('Phone_Number');
-        $user->User_Name=$request->input('User_Name');
-        $user->Password=($request->input('Password')); 
-        $user->retype_password=$request->input('retype_password');
-        $request->session()->flash('status','Successfully registered');
-        $user->save();
-        return redirect('/');
-    
-    }
-
-    //login 
-    public function login(Request $request)
-    {
-        $user = Register::where('Email',$request->input('Email'))-> get(); 
-        if(($user[0]->Password) == $request->input('Password')){
-            return redirect('/');
-
-        }
     }
 
     //equipment view
