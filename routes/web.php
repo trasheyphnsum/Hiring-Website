@@ -21,9 +21,6 @@ use Illuminate\Support\Facades\Route;
 //Route::view('/', 'hire/home');
 Route::get('/', 'Restroscontroller@list')->name('list_home');
 
-
-
-
 //register
 // Route::view('/register', 'hire/register');
 // Route::post('/register', 'Restroscontroller@register');
@@ -34,8 +31,6 @@ Route::view('/guide', 'hire/touristguide');
 //Driver
 Route::view('/driver', 'hire/driver');
 
-//Tuition tutor
-Route::view('/tutor', 'hire/tutor');
 
 //Technician
 Route::view('/tech', 'hire/technician');
@@ -60,5 +55,10 @@ Route::post('/add_equipment', 'Restroscontroller@add')->name('add_equipment');
 //Vehicle or machine
 Route::view('/add1', 'hire/add1');
 Route::post('/add_machine', 'Restroscontroller@add1')->name('add_machine');
+
+//Tuition tutor
+Route::view('/tutor', 'hire/tutor');
+Route::post('/add_tutor', 'Restroscontroller@addtutor')->name('add_tutor');
+
 
 });

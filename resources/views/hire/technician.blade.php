@@ -22,6 +22,13 @@
                         </div> 
 
                         <div class="form-group row">
+                            <label for="type" class="col-sm-3 col-form-label text-md-right">{{__('Technician')}}</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" name ="Technician" placeholder="Enter what Type technician are you">
+                            </div> 
+                        </div> 
+
+                        <div class="form-group row">
                             <label for="qualification" class="col-sm-3 col-form-label text-md-right">{{__('Qualification')}}</label>
                             <div class="col-md-6">
                                 <input type="text" class="form-control" name ="Qualification" placeholder="Enter your Qualification">

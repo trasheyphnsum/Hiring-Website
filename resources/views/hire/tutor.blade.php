@@ -12,19 +12,19 @@
             <div class="card">
                 <div class="card-header">{{ __('You can post your details') }}</div>
                     <div class="card-body">
-                        <form method="post" action="" enctype="multipart/form-data">
+                        <form method="post" action="{{route('add_tutor')}}" enctype="multipart/form-data">
                         {{ @csrf_field() }}
                         <div class="form-group row">
                             <label for="experience" class="col-sm-3 col-form-label text-md-right">{{__('Experience')}}</label>
                             <div class="col-md-6">
-                                <input type="text" class="form-control" name ="experience" placeholder="Enter your experience">
+                                <input type="text" class="form-control" name ="Experience" placeholder="Enter your experience">
                             </div> 
                         </div> 
 
                         <div class="form-group row">
                             <label for="subject" class="col-sm-3 col-form-label text-md-right">{{__('Subject')}}</label>
                             <div class="col-md-6">
-                                <input type="text" class="form-control" name ="Qualification" placeholder="Enter your specialized Subject">
+                                <input type="text" class="form-control" name ="subject" placeholder="Enter your specialized Subject">
                             </div> 
                         </div> 
 
@@ -38,7 +38,7 @@
                         <div class="form-group row">
                             <label for="EquipmentType" class="col-sm-3 col-form-label text-md-right">{{__('Service Charge')}}</label>
                             <div class="col-md-6">
-                                <input type="text" class="form-control" name ="charge" placeholder="Enter  Service charge">
+                                <input type="number" class="form-control" name ="Service_charge" placeholder="Enter  Service charge">
                             </div> 
                         </div>
 

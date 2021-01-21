@@ -24,12 +24,10 @@
                             </div> 
                         </div> 
 
-                        <div class="form-group">
                             <label for="message" class="col-sm-3 col-form-label text-md-right">Message</label>
                             <div class="col-md-6">
                                 <textarea name="message"  row="7"></textarea>
                             </div> 
-                        </div>
 
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary btn-lg float-right">Submit</button>

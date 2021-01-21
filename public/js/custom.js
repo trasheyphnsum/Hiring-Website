@@ -18,4 +18,4 @@ if(authCheck==1){
 
   $('.btn1').prop('disabled', false);
 }
-});
+})

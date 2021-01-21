@@ -5,7 +5,7 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Session;
-
+use Auth;
 class LoginController extends Controller
 {
     /*
@@ -36,7 +36,10 @@ class LoginController extends Controller
      */
     public function __construct()
     {
-        Session::flash('status','You are logged in!');
+       
         $this->middleware('guest')->except('logout');
+        Session::flash('status','You are logged in!');
     }
+
+   
 }

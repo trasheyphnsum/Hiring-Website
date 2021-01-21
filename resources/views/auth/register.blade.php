@@ -80,6 +80,12 @@
                                 </button>
                             </div>
                         </div>
+                        <div class="text-block text-center my-3">
+                        <div class="col-md-8 offset-md-2">
+                            <span class="tetx-small">Already have an Account?<span>
+                           <strong> <a class="btn btn-link  text-black text-small" href="/login">Login</a> <strong>  
+                         </div>
+                        </div>
                     </form>
                 </div>
             </div>

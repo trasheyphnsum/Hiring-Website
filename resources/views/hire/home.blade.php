@@ -10,14 +10,16 @@
 
 <div class="wrap">
    <div class="search">
-      <input type="text" class="searchTerm" placeholder="What are you looking for?">
+      <input type="text"  class="searchTerm" placeholder="What are you looking for?">
       <button type="submit" class="searchButton">
         <i class="fa fa-search"></i>
      </button>
-     <input type='hidden' id='auth' value={{Auth::check()}}>
    </div>
 </div>
+
+<!-- display part-->
 <div class="container py-5">
+<input type='hidden' id='auth' value={{Auth::check()}}>
     <div class="row">
         <div class="col-md-12">
           <h2 class="text-center"> Equipment Available<h2>    
@@ -27,10 +29,10 @@
     @foreach ($record as $re)
         <div class="col-md-4" style="margin-bottom:10px">
             <div class="card bg-light">
-                <div class="card-body ">
+                <div class="card-body">
                     <img alt=""  class ="card-img-top"src="{{ URL::to('/') }}/images/{{$re['Image']}}" width="100px" height="150px">
-                    <h5 class="card-title mb-4 mt-1">Equipment Details:</h5>
-                    <p class="card-title mb-4 mt-1"><strong>Equipment Type: </strong>{{$re->Equipment_Type}}</p>
+                    <h5 class="card-title mb-4 mt-1 ">Equipment Details:</h5>
+                    <p class="card-title mb-4 mt-1" ><strong>Equipment Type: </strong>{{$re->Equipment_Type}}</p>
                     <p class ="card-text"><strong>Renting Price: </strong>{{$re->Price}}</p>
                     <p class ="card-text"><strong>Condition: </strong>{{$re->Condition}}</p>
                     <p class ="card-text"><strong>Location: </strong>{{$re->Location}}</p>

@@ -61,13 +61,11 @@
                                 @endif
                             </div>
                         </div>
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <strong>Do you have any Account? If not,<a class="btn btn-link float-right" href="/register">
-                                    {{ __(' Register') }}
-                                </a></strong>
-                                
-                            </div>
+                        <div class="text-block text-center my-3">
+                        <div class="col-md-8 offset-md-2">
+                            <span class="tetx-small">Not a Member?<span>
+                            <a class="btn btn-link  text-black text-small" href="/register">{{ __(' Create New Account') }}</a>   
+                         </div>
                         </div>
                     </form>
                 </div>
